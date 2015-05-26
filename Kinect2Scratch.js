@@ -16,5 +16,5 @@
     };
 
     // Register the extension
-    ScratchExtensions.register('Sample extension', descriptor, ext);
+    ScratchExtensions.register('Kinect2Scratch', descriptor, ext);
 })({});
