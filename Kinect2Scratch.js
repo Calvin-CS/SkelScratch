@@ -12,7 +12,7 @@
     var descriptor = {
         blocks: [
 			['', 'My First Block', 'my_first_block'],
-			['r', 'A block that has a parameter', 'param_block', 2, 3],
+			['r', '%n ^ %n', 'power', 2, 3],
         ]
     };
 
