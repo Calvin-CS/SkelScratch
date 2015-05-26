@@ -11,6 +11,7 @@
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
+			[' ', 'my first block', 'my_first_block'],
         ]
     };
 
