@@ -8,6 +8,14 @@
         return {status: 2, msg: 'Ready'};
     };
 
+	    ext.wait_random = function(callback) {
+        wait = Math.random();
+        console.log('Waiting for ' + wait + ' seconds');
+        window.setTimeout(function() {
+            callback();
+        }, wait*1000);
+    };
+	
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
