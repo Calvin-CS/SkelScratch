@@ -8,9 +8,8 @@
         return {status: 2, msg: 'Ready'};
     };
 
-	    ext.wait_random = function(callback) {
-        wait = Math.random();
-        console.log('Waiting for ' + wait + ' seconds');
+	    ext.my_first_block = function(callback) {
+        wait = 10;
         window.setTimeout(function() {
             callback();
         }, wait*1000);
