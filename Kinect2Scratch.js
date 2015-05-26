@@ -18,7 +18,7 @@
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
-			['r', 'A block that has a parameter', 'I\'m a parameter'],
+			['r', 'A block that has a parameter', 'param_block', 2, 3],
         ]
     };
 
