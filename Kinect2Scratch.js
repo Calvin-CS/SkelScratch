@@ -8,12 +8,14 @@
         return {status: 2, msg: 'Ready'};
     };
 
-	    ext.my_first_block = function(callback) {
-        wait = 1;
-        window.setTimeout(function() {
-            callback();
-        }, wait*1000);
+	ext.my_first_block = function() {
+
     };
+	
+	    ext.power = function(base, exponent) {
+        return Math.pow(base, exponent);
+    };
+
 	
     // Block and block menu descriptions
     var descriptor = {
