@@ -8,10 +8,17 @@
         return {status: 2, msg: 'Ready'};
     };
 
+	    // Block and block menu descriptions
+    var descriptor = {
+        blocks: [
+			['', 'My First Block', 'my_first_block'],
+        ]
+    };
+	
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
-			[' ', 'my first block', 'my_first_block'],
+			['r', 'A block that has a parameter', 'I\'m a parameter'],
         ]
     };
 
