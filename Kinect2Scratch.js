@@ -9,7 +9,7 @@
     };
 
 	    ext.my_first_block = function(callback) {
-        wait = 10;
+        wait = 1;
         window.setTimeout(function() {
             callback();
         }, wait*1000);
