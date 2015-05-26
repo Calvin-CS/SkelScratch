@@ -15,12 +15,12 @@
         ]
     };
 	
-    // Block and block menu descriptions
-    //var descriptor = {
-    //    blocks: [
-	//		['r', 'A block that has a parameter', 'param_block', 2, 3],
-    //    ]
-    //};
+     Block and block menu descriptions
+    var descriptor = {
+        blocks: [
+			['r', 'A block that has a parameter', 'param_block', 2, 3],
+        ]
+    };
 
     // Register the extension
     ScratchExtensions.register('Kinect2Scratch', descriptor, ext);
