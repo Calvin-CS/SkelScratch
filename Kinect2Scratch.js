@@ -14,7 +14,7 @@
         blocks: [
 			['', 'My First Block', 'my_first_block'],
 			['r', '%n ^ %n', 'power', 2, 3],
-            ['b', '%m.k', 'k', 'heady']
+            ['r', '%m.k', 'k', 'heady']
         ],
         
         menus: {
@@ -32,10 +32,10 @@
 
     ext.k = function(m) {
         switch(m){
-            case 'headx': return true;
-            case 'heady': return true;
-            case 'righthandx': return false;
-            case 'righthandy': return false;
+            case 'headx': return 1;
+            case 'heady': return 2;
+            case 'righthandx': return 3;
+            case 'righthandy': return 4;
         }
     };
 
