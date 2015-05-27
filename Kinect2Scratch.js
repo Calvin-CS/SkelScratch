@@ -9,7 +9,7 @@
     };
 
 	ext.my_first_block = function() {
-		nchgm()
+		nchgm();
     };
 	
 	    ext.power = function(base, exponent) {
