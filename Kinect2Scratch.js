@@ -18,7 +18,7 @@
         ],
         
         menus: {
-	    k: ['headx', 'heady', 'righthandx', 'righthandy']
+	    k: ['headx', 'heady']
     }
     };
 
@@ -34,8 +34,6 @@
         switch(m){
             case 'headx': return 1;
             case 'heady': return 2;
-            case 'righthandx': return 3;
-            case 'righthandy': return 4;
         }
     };
 
