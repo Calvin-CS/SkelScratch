@@ -13,7 +13,7 @@
     };
 	
 	    ext.power = function(base, exponent) {
-        return Math.pow(base, exponent);
+        return Math.pow(base,f exponent);
     };
 
 	
