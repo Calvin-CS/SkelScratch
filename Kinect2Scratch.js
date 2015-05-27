@@ -15,7 +15,7 @@
 			['', 'My First Block', 'my_first_block'],
 			['r', '%n ^ %n', 'power', 2, 3],
             ['b', '%m.k', 'k', 'heady']
-        ]
+        ],
         
         menus: {
 	    k: ['headx', 'heady', 'righthandx', 'righthandy']
