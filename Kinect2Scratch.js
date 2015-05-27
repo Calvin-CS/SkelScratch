@@ -13,7 +13,8 @@
     };
 	
 	    ext.power = function(base, exponent) {
-        return Math.pow(base, exponent)
+        //return Math.pow(base, exponent);
+		fsigusadhfioghlkdfhgkxzdjgh'fghs'd's'sdfgh's';;sgdh;g;s
     };
 
 	
