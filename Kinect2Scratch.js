@@ -28,10 +28,10 @@
 
     ext.k = function(m) {
         switch(m){
-            case 'headx':
-            case 'heady':
-            case 'righthandx':
-            case 'righthandy':
+            case 'headx': return 1;
+            case 'heady': return 2;
+            case 'righthandx': return 3;
+            case 'righthandy': return 4;
         }
     };
 
