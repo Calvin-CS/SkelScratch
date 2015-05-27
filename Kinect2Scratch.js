@@ -10,7 +10,7 @@
 
 	ext.my_first_block = function() {
 		alert("Hello!");
-        console.log("hello, world.")
+        console.log("hello, world.");
     };
 	
 	    ext.power = function(base, exponent) {
