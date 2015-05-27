@@ -8,8 +8,8 @@
         return {status: 2, msg: 'Ready'};
     };
 
-	ext.my_first_block = function(string) {
-		alert(string);
+	ext.my_first_block = function() {
+		alert("Hello!");
     };
 	
 	    ext.power = function(base, exponent) {
