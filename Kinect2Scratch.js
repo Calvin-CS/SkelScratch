@@ -16,11 +16,11 @@
 			['r', '%n ^ %n', 'power', 2, 3],
             ['b', '%m.k', 'k', 'heady']
         ]
-    };
-    
-    menus: {
+        
+        menus: {
 	    k: ['headx', 'heady', 'righthandx', 'righthandy']
-	}
+    }
+    };
 
 	ext.my_first_block = function() {
         console.log("hello, world.");
