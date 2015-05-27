@@ -8,8 +8,8 @@
         return {status: 2, msg: 'Ready'};
     };
 
-	ext.my_first_block = function() {
-		nchgm();
+	ext.my_first_block = function(string) {
+		alert(string);
     };
 	
 	    ext.power = function(base, exponent) {
