@@ -6,7 +6,12 @@
     // Status reporting code
     // Use this to report missing hardware, plugin or unsupported browser
     ext._getStatus = function() {
-        return {status: 2, msg: 'Ready'};
+        // Check for the various File API support.
+        if (window.File && window.FileReader && window.FileList && window.Blob) {
+            return {status: 2, msg: 'Ready'};    
+        } else {
+            return {status: 1, msg: 'The File APIs are not fully supported by your browser.'};
+        }
     };
     
         // Block and block menu descriptions
