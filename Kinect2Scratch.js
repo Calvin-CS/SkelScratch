@@ -8,10 +8,9 @@
     ext._getStatus = function() {
         // Check for the various File API support.
         if (window.File && window.FileReader && window.FileList && window.Blob) {
-            return {status: 1, msg: 'The File APIs are not fully supported by your browser.'};
-            //return {status: 2, msg: 'Ready'};    
+            return {status: 2, msg: 'Ready'};    
         } else {
-            return {status: 1, msg: 'The File APIs are not fully supported by your browser.'};
+            return {status: 0, msg: 'The File APIs are not fully supported by your browser.'};
         }
     };
     
