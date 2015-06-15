@@ -45,7 +45,7 @@
     
     var start = function() {
         alert("hello!");
-    }
+    };
     
         window.onload = start;
 
