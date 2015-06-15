@@ -44,7 +44,7 @@
     
     
     var start = function() {
-        alert("hello!);
+        alert("hello!");
     }
     
         window.onload = start;
