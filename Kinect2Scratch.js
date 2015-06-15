@@ -51,10 +51,8 @@
     ScratchExtensions.register('Kinect2Scratch', descriptor, ext);
 })
 
-    var start = function() {
+({    var start = function() {
         alert("hello!");
     };
 
-    window.onload = start;
-
-({});
+    window.onload = start;});
