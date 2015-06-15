@@ -41,6 +41,13 @@
             case 'heady': return 2;
         }
     };
+    
+    
+    var start = function() {
+        alert("hello!);
+    }
+    
+        window.onload = start;
 
     // Register the extension
     ScratchExtensions.register('Kinect2Scratch', descriptor, ext);
