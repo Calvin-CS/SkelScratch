@@ -8,7 +8,7 @@
     ext._getStatus = function() {
         // Check for the various File API support.
         if (window.File && window.FileReader && window.FileList && window.Blob) {
-            return {status: 2, msg: 'Ready'};    
+            return {status: 2, msg: 'Ready'};
         } else {
             return {status: 0, msg: 'The File APIs are not fully supported by your browser.'};
         }
@@ -43,12 +43,18 @@
     };
     
     
-    var start = function() {
-        alert("hello!");
-    };
+
     
-        window.onload = start;
+        
 
     // Register the extension
     ScratchExtensions.register('Kinect2Scratch', descriptor, ext);
-})({});
+})
+
+    var start = function() {
+        alert("hello!");
+    };
+
+    window.onload = start;
+
+({});
