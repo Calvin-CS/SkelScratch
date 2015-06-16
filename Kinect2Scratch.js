@@ -61,7 +61,12 @@
         }
     };
     
-
+    function myOnLoadFunction()
+    {
+        console.log("It's working, it's working!");
+    };
+    
+    window.addEventListener("load",myOnLoadFunction);
     
 
     /*window.addEventListener("load", start);
@@ -104,10 +109,3 @@
     // Register the extension
     ScratchExtensions.register('Kinect2Scratch', descriptor, ext);
 })({});
-
-    function myOnLoadFunction()
-    {
-        console.log("It's working, it's working!");
-    }
-    
-    window.addEventListener("load",myOnLoadFunction);
