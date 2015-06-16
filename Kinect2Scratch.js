@@ -22,7 +22,7 @@
         }
         if(boolean)
         {
-            return {status: 1, msg: 'Not ready yet."};
+            return {status: 1, msg: 'Not ready yet.'};
         }
         return {status: 2, msg: 'Ready'};
         
