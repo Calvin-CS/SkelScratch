@@ -29,7 +29,6 @@
 
 	ext.my_first_block = function() {
         console.log("hello, world.");
-        alert("hello!");
     };
 	
     ext.power = function(base, exponent) {
@@ -44,7 +43,7 @@
     };
     
      var start = function() {
-        alert("hello!");
+        console.log("It's working, it's working!");
     };
 
     window.onload = start;
