@@ -69,7 +69,7 @@
     
     function myOnLoadFunction()
     {
-        console.log("It's working, it's working!")'
+        console.log("It's working, it's working!");
     }
     
         
