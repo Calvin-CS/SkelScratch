@@ -15,15 +15,15 @@
         //} else {
         //    return {status: 0, msg: 'The File APIs are not fully supported by your browser.'};
         //}
-        //if(firstTime)
-        //{
-        //console.log("text 3");
-        //firstTime = false;
-        //}
-        //if(boolean)
-        //{
-        //    return {status: 1, msg: 'Not ready yet.'};
-        //}
+        if(firstTime)
+        {
+        console.log("text 3");
+        firstTime = false;
+        }
+        if(boolean)
+        {
+            return {status: 1, msg: 'Not ready yet.'};
+        }
         return {status: 2, msg: 'Ready'};
         
     };
@@ -61,51 +61,18 @@
         }
     };
     
-    function myOnLoadFunction()
-    {
-        console.log("It's working, it's working!");
+     var start = function() {
+        console.log("Text 1");
     };
-    
+
     window.addEventListener("load",myOnLoadFunction);
     
-
-    /*window.addEventListener("load", start);
+    function myOnLoadFunction()
+    {
+        console.log("It's working, it's working!")'
+    }
     
-    var start = function () {
-        var wsImpl = window.WebSocket || window.MozWebSocket;
-        //var form = document.getElementById('sendForm');
-        //var input = document.getElementById('sendText');
         
-        console.log("connecting to server ..");
-
-        // create a new websocket and connect
-        window.ws = new wsImpl('ws://localhost:8181/');
-
-        // when data is comming from the server, this metod is called
-        //ws.onmessage = function (evt) {
-        //    inc.innerHTML += evt.data + '<br/>';
-        //};
-        
-        // when the connection is established, this method is called
-        ws.onopen = function () {
-            console.log(".. connection open");
-        };
-
-        // when the connection is closed, this method is called
-        ws.onclose = function () {
-            console.log(".. connection closed");
-        }
-            
-     };*/
-            
-			//form.addEventListener('submit', function(e){
-			//	e.preventDefault();
-			//	var val = input.value;
-			//	ws.send(val);
-			//	input.value = "";
-			//});
-
-
     // Register the extension
     ScratchExtensions.register('Kinect2Scratch', descriptor, ext);
 })({});
