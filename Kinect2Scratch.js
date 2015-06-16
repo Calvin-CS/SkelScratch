@@ -12,7 +12,12 @@
         //} else {
         //    return {status: 0, msg: 'The File APIs are not fully supported by your browser.'};
         //}
+        if(firstTime = false)
+        {
         console.log("It's working, it's working!");
+        firstTime = false;
+        }
+        
     };
     
         // Block and block menu descriptions
