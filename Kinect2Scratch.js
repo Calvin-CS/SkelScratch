@@ -1,6 +1,7 @@
 (function(ext) {
     
     var firstTime = true;
+    var boolean = true;
     // Cleanup function when the extension is unloaded
     ext._shutdown = function() {};
     
@@ -19,6 +20,10 @@
         console.log("It's working, it's working!");
         firstTime = false;
         }
+        if(boolean = false)
+        {
+            return {status: 1, msg: 'Not ready yet."};
+        }
         return {status: 2, msg: 'Ready'};
         
     };
@@ -28,7 +33,8 @@
         blocks: [
 			['', 'My First Block', 'my_first_block'],
 			['r', '%n ^ %n', 'power', 2, 3],
-            ['r', '%m.k', 'k', 'heady']
+            ['r', '%m.k', 'k', 'heady'],
+            ['', 'Get Ready', 'get_ready']
         ],
         
         menus: {
@@ -39,6 +45,10 @@
 	ext.my_first_block = function() {
         console.log("hello, world.");
     };
+        
+    ext.get_ready = function() {
+        boolean = false;
+    }
 	
     ext.power = function(base, exponent) {
         return Math.pow(base, exponent);
