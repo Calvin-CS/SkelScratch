@@ -1,4 +1,6 @@
 (function(ext) {
+    
+    var firstTime = true;
     // Cleanup function when the extension is unloaded
     ext._shutdown = function() {};
     
@@ -17,6 +19,7 @@
         console.log("It's working, it's working!");
         firstTime = false;
         }
+        return {status: 2, msg: 'Ready'};
         
     };
     
