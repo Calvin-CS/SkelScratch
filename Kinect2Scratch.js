@@ -2,6 +2,10 @@
     
     var firstTime = true;
     var boolean = true;
+    
+    console.log("It's working, it's working!");
+    
+    
     // Cleanup function when the extension is unloaded
     ext._shutdown = function() {};
     
@@ -61,16 +65,12 @@
         }
     };
     
-     var start = function() {
-        console.log("Text 1");
-    };
-
-    window.addEventListener("load",myOnLoadFunction);
-    
     function myOnLoadFunction()
     {
         console.log("It's working, it's working!");
     }
+
+    window.addEventListener("load",myOnLoadFunction);
     
         
     // Register the extension
