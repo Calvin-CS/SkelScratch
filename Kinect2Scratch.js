@@ -3,6 +3,7 @@
     var firstTime = true;
     var boolean = true;
     
+    alert("You're a stupidface!");
     console.log("It's working, it's working!");
     
     
