@@ -61,14 +61,14 @@
         }
     };
     
-    
-    window.addEventListener("load",myOnLoadFunction);
-    
     function myOnLoadFunction()
     {
         console.log("It's working, it's working!");
     }
     
+    window.addEventListener("load",myOnLoadFunction);
+    
+
     /*window.addEventListener("load", start);
     
     var start = function () {
