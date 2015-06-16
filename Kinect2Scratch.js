@@ -15,12 +15,12 @@
         //} else {
         //    return {status: 0, msg: 'The File APIs are not fully supported by your browser.'};
         //}
-        if(firstTime = false)
+        if(firstTime)
         {
         console.log("It's working, it's working!");
         firstTime = false;
         }
-        if(boolean = false)
+        if(boolean)
         {
             return {status: 1, msg: 'Not ready yet."};
         }
