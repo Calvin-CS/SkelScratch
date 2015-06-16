@@ -3,8 +3,8 @@
     var firstTime = true;
     var boolean = true;
     
-    alert("You're a stupidface!");
-    console.log("It's working, it's working!");
+    alert("BEFORE CLICKING OK<br/>Make sure you have have followed the instructions in Kinect2Scratch");
+    console.log("Right after the alert");
     
     
     // Cleanup function when the extension is unloaded
@@ -20,16 +20,16 @@
         //} else {
         //    return {status: 0, msg: 'The File APIs are not fully supported by your browser.'};
         //}
-        if(firstTime)
-        {
-        console.log("text 3");
-        firstTime = false;
-        }
-        if(boolean)
-        {
-            return {status: 1, msg: 'Not ready yet.'};
-        }
-        return {status: 2, msg: 'Ready'};
+        //if(firstTime)
+        //{
+        //console.log("text 3");
+        //firstTime = false;
+        //}
+        //if(boolean)
+        //{
+        //    return {status: 1, msg: 'Not ready yet.'};
+        //}
+        //return {status: 2, msg: 'Ready'};
         
     };
     
@@ -48,7 +48,7 @@
     };
 
 	ext.my_first_block = function() {
-        console.log("Text 2");
+        console.log("My first block");
     };
         
     ext.get_ready = function() {
@@ -65,13 +65,6 @@
             case 'heady': return 2;
         }
     };
-    
-    function myOnLoadFunction()
-    {
-        console.log("It's working, it's working!");
-    }
-
-    window.addEventListener("load",myOnLoadFunction);
     
         
     // Register the extension
