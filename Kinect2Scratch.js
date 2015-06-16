@@ -3,12 +3,11 @@
     var firstTime = true;
     var boolean = true;
     
-    alert("BEFORE CLICKING OK<br/>Make sure you have have followed the instructions in Kinect2Scratch");
-    console.log("Right after the alert");
-    
     
     // Cleanup function when the extension is unloaded
     ext._shutdown = function() {};
+    
+    
     
 
     // Status reporting code
@@ -65,6 +64,9 @@
             case 'heady': return 2;
         }
     };
+    
+    alert("BEFORE CLICKING OK<br/>Make sure you have have followed the instructions in Kinect2Scratch");
+    console.log("Right after the alert");
     
         
     // Register the extension
