@@ -17,7 +17,7 @@
         //}
         if(firstTime)
         {
-        console.log("It's working, it's working!");
+        console.log("text 3");
         firstTime = false;
         }
         if(boolean)
@@ -43,7 +43,7 @@
     };
 
 	ext.my_first_block = function() {
-        console.log("hello, world.");
+        console.log("Text 2");
     };
         
     ext.get_ready = function() {
@@ -62,10 +62,15 @@
     };
     
      var start = function() {
-        console.log("It's working, it's working!");
+        console.log("Text 1");
     };
 
-    window.onload = start;
+    window.addEventListener("load",myOnLoadFunction);
+    
+    function myOnLoadFunction()
+    {
+        console.log("It's working, it's working!")'
+    }
 
     
         
