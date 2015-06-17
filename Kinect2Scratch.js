@@ -2,6 +2,7 @@
     
     var firstTime = true;
     var boolean = true;
+    var headX = 0;
     
     alert("BEFORE CLICKING OK<br/>Make sure you have have followed the instructions in Kinect2Scratch");
     console.log("Right after the alert");
@@ -16,6 +17,7 @@
     // when data is comming from the server, this metod is called
     ws.onmessage = function (evt) {
         console.log(evt.data + '<br/>');
+        headX = parseInt(evt.data);
     };
 
     // when the connection is established, this method is called
@@ -60,7 +62,7 @@
 			['', 'My First Block', 'my_first_block'],
 			['r', '%n ^ %n', 'power', 2, 3],
             ['r', '%m.k', 'k', 'heady'],
-            ['', 'Get Ready', 'get_ready']
+            ['', 'Get Ready', 'get_ready'],
         ],
         
         menus: {
@@ -82,7 +84,7 @@
 
     ext.k = function(m) {
         switch(m){
-            case 'headx': return 1;
+            case 'headx': return headX;
             case 'heady': return 2;
         }
     };
