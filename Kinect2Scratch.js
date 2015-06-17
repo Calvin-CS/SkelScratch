@@ -2,7 +2,8 @@
     
     var firstTime = true;
     var boolean = true;
-    var headX = 0;
+    var jsonObject = null;
+    //var headX = 0;
     
     alert("BEFORE CLICKING OK<br/>Make sure you have have followed the instructions in Kinect2Scratch");
     console.log("Right after the alert");
@@ -16,8 +17,12 @@
 
     // when data is comming from the server, this metod is called
     ws.onmessage = function (evt) {
-        console.log(evt.data + '<br/>');
-        headX = parseInt(evt.data);
+        //console.log(evt.data + '<br/>');
+        if(evt != "0")
+        {
+        jsonObject = JSON.parse(evt.data);
+        }
+        //headX = parseInt(evt.data);
     };
 
     // when the connection is established, this method is called
@@ -61,12 +66,12 @@
         blocks: [
 			['', 'My First Block', 'my_first_block'],
 			['r', '%n ^ %n', 'power', 2, 3],
-            ['r', '%m.k', 'k', 'heady'],
+            ['r', '%m.k', 'k', 'headX'],
             ['', 'Get Ready', 'get_ready'],
         ],
         
         menus: {
-	    k: ['headx', 'heady']
+	    k: ['ankleLeftX', 'ankleLeftY', 'ankleRightX', 'ankleRightY', 'elbowLeftX', 'elbowLeftY', 'elbowRightX', 'elbowRightY', 'footLeftX', 'footLeftY', 'footRightX', 'footRightY', 'handLeftX', 'handLeftY', 'handRightX', 'handRightY', 'handTipLeftX', 'handTipLeftY', 'handTipRightX', 'handTipRightY', 'headX', 'headY', 'hipLeftX', 'hipLeftY', 'hipRightX', 'hipRightY', 'kneeLeftX', 'kneeLeftY', 'kneeRightX', 'kneeRightY', 'neckX', 'neckY', 'shoulderLeftX', 'shoulderLeftY', 'shoulderRightX', 'shoulderRightY', 'spineBaseX', 'spineBaseY', 'spineMidX', 'spineMidY', 'spineShoulderX', 'spineShoulderY', 'thumbLeftX', 'thumbLeftY', 'thumbRightX', 'thumbRightY', 'wristLeftX', 'wristLeftY', 'wristRightX',  'wristRightY']
     }
     };
 
@@ -92,5 +97,5 @@
     
         
     // Register the extension
-    ScratchExtensions.register('Kinect2Scratch', descriptor, ext);
+    ScratchExtensions.register('KinectinScratch', descriptor, ext);
 })({});
