@@ -71,7 +71,7 @@
         ],
         
         menus: {
-	    k: ['ankleLeftX', 'ankleLeftY', 'ankleRightX', 'ankleRightY', 'elbowLeftX', 'elbowLeftY', 'elbowRightX', 'elbowRightY', 'footLeftX', 'footLeftY', 'footRightX', 'footRightY', 'handLeftX', 'handLeftY', 'handRightX', 'handRightY', 'handTipLeftX', 'handTipLeftY', 'handTipRightX', 'handTipRightY', 'headX', 'headY', 'hipLeftX', 'hipLeftY', 'hipRightX', 'hipRightY', 'kneeLeftX', 'kneeLeftY', 'kneeRightX', 'kneeRightY', 'neckX', 'neckY', 'shoulderLeftX', 'shoulderLeftY', 'shoulderRightX', 'shoulderRightY', 'spineBaseX', 'spineBaseY', 'spineMidX', 'spineMidY', 'spineShoulderX', 'spineShoulderY', 'thumbLeftX', 'thumbLeftY', 'thumbRightX', 'thumbRightY', 'wristLeftX', 'wristLeftY', 'wristRightX',  'wristRightY']
+	    k: ['ankleLeftX', 'ankleLeftY', 'ankleRightX', 'ankleRightY', 'elbowLeftX', 'elbowLeftY', 'elbowRightX', 'elbowRightY', 'footLeftX', 'footLeftY', 'footRightX', 'footRightY', 'handLeftX', 'handLeftY', 'handRightX', 'handRightY', 'handTipLeftX', 'handTipLeftY', 'handTipRightX', 'handTipRightY', 'headX', 'headY', 'hipLeftX', 'hipLeftY', 'hipRightX', 'hipRightY', 'kneeLeftX', 'kneeLeftY', 'kneeRightX', 'kneeRightY', 'neckX', 'neckY', 'shoulderLeftX', 'shoulderLeftY', 'shoulderRightX', 'shoulderRightY', 'spineBaseX', 'spineBaseY', 'spineMidX', 'spineMidY', 'spineShoulderX', 'spineShoulderY', 'thumbLeftX', 'thumbLeftY', 'thumbRightX', 'thumbRightY', 'wristLeftX', 'wristLeftY', 'wristRightX', 'wristRightY']
     }
     };
 
@@ -89,8 +89,56 @@
 
     ext.k = function(m) {
         switch(m){
-            case 'headx': return headX;
-            case 'heady': return 2;
+            case 'ankleLeftX':
+            case 'ankleLeftY':
+            case 'ankleRightX':
+            case 'ankleRightY':
+            case 'elbowLeftX':
+            case 'elbowLeftY':
+            case 'elbowRightX':
+            case 'elbowRightY':
+            case 'footLeftX':
+            case 'footLeftY':
+            case 'footRightX':
+            case 'footRightY':
+            case 'handLeftX':
+            case 'handLeftY':
+            case 'handRightX':
+            case 'handRightY':
+            case 'handTipLeftX':
+            case 'handTipLeftY':
+            case 'handTipRightX':
+            case 'handTipRightY':
+            case 'headX':
+            case 'headY':
+            case 'hipLeftX':
+            case 'hipLeftY':
+            case 'hipRightX':
+            case 'hipRightY':
+            case 'kneeLeftX':
+            case 'kneeLeftY':
+            case 'kneeRightX':
+            case 'kneeRightY':
+            case 'neckX':
+            case 'neckY':
+            case 'shoulderLeftX':
+            case 'shoulderLeftY':
+            case 'shoulderRightX':
+            case 'shoulderRightY':
+            case 'spineBaseX':
+            case 'spineBaseY':
+            case 'spineMidX':
+            case 'spineMidY':
+            case 'spineShoulderX':
+            case 'spineShoulderY':
+            case 'thumbLeftX':
+            case 'thumbLeftY':
+            case 'thumbRightX':
+            case 'thumbRightY':
+            case 'wristLeftX':
+            case 'wristLeftY':
+            case 'wristRightX':
+            case 'wristRightY':
         }
     };
 
