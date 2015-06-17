@@ -67,7 +67,7 @@
 			['', 'My First Block', 'my_first_block'],
 			['r', '%n ^ %n', 'power', 2, 3],
             ['r', '%m.k', 'k', 'headX'],
-            ['', 'Get Ready', 'get_ready'],
+            ['', 'Restart connection', 'restart'],
         ],
         
         menus: {
@@ -79,8 +79,8 @@
         console.log("My first block");
     };
         
-    ext.get_ready = function() {
-        boolean = false;
+    ext.restart = function() {
+        window.ws = new wsImpl('ws://localhost:8181/');
     }
 	
     ext.power = function(base, exponent) {
