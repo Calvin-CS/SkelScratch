@@ -33,7 +33,7 @@
     // when the connection is closed, this method is called
     ws.onclose = function () {
         console.log('.. connection closed<br/>');
-    }
+    };
     
     // Cleanup function when the extension is unloaded
     ext._shutdown = function() {};
@@ -82,7 +82,7 @@
         
     ext.restart = function() {
         window.ws = new wsImpl('ws://localhost:8181/');
-    }
+    };
 	
     ext.power = function(base, exponent) {
         return Math.pow(base, exponent);
@@ -90,7 +90,7 @@
     
     ext.test_block = function() {
         console.log(jsonObject.bodies.joints[10].X);
-    }
+    };
 
     ext.k = function(m) {
         switch(m){
