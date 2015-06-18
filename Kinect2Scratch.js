@@ -89,56 +89,56 @@
 
     ext.k = function(m) {
         switch(m){
-            case 'ankleLeftX':
-            case 'ankleLeftY':
-            case 'ankleRightX':
-            case 'ankleRightY':
-            case 'elbowLeftX':
-            case 'elbowLeftY':
-            case 'elbowRightX':
-            case 'elbowRightY':
-            case 'footLeftX':
-            case 'footLeftY':
-            case 'footRightX':
-            case 'footRightY':
-            case 'handLeftX':
-            case 'handLeftY':
-            case 'handRightX':
-            case 'handRightY':
-            case 'handTipLeftX':
-            case 'handTipLeftY':
-            case 'handTipRightX':
-            case 'handTipRightY':
-            case 'headX':
-            case 'headY':
-            case 'hipLeftX':
-            case 'hipLeftY':
-            case 'hipRightX':
-            case 'hipRightY':
-            case 'kneeLeftX':
-            case 'kneeLeftY':
-            case 'kneeRightX':
-            case 'kneeRightY':
-            case 'neckX':
-            case 'neckY':
-            case 'shoulderLeftX':
-            case 'shoulderLeftY':
-            case 'shoulderRightX':
-            case 'shoulderRightY':
-            case 'spineBaseX':
-            case 'spineBaseY':
-            case 'spineMidX':
-            case 'spineMidY':
-            case 'spineShoulderX':
-            case 'spineShoulderY':
-            case 'thumbLeftX':
-            case 'thumbLeftY':
-            case 'thumbRightX':
-            case 'thumbRightY':
-            case 'wristLeftX':
-            case 'wristLeftY':
-            case 'wristRightX':
-            case 'wristRightY':
+            case 'ankleLeftX': return jsonObject.Bodies.Joints.AnkleLeft.X;
+            case 'ankleLeftY': return jsonObject.Bodies.Joints.AnkleLeft.Y;
+            case 'ankleRightX': return jsonObject.Bodies.Joints.AnkleRight.X;
+            case 'ankleRightY': return jsonObject.Bodies.Joints.AnkleRight.Y;
+            case 'elbowLeftX': return jsonObject.Bodies.Joints.ElbowLeft.X;
+            case 'elbowLeftY': return jsonObject.Bodies.Joints.ElbowLeft.Y;
+            case 'elbowRightX': return jsonObject.Bodies.Joints.ElbowRight.X;
+            case 'elbowRightY': return jsonObject.Bodies.Joints.ElbowRight.Y;
+            case 'footLeftX': return jsonObject.Bodies.Joints.FootLeft.X;
+            case 'footLeftY': return jsonObject.Bodies.Joints.FootLeft.Y;
+            case 'footRightX': return jsonObject.Bodies.Joints.FootRight.X;
+            case 'footRightY': return jsonObject.Bodies.Joints.FootRight.Y;
+            case 'handLeftX': return jsonObject.Bodies.Joints.HandLeft.X;
+            case 'handLeftY': return jsonObject.Bodies.Joints.HandLeft.Y;
+            case 'handRightX': return jsonObject.Bodies.Joints.HandRight.X;
+            case 'handRightY': return jsonObject.Bodies.Joints.HandRight.Y;
+            case 'handTipLeftX': return jsonObject.Bodies.Joints.HandTipLeft.X;
+            case 'handTipLeftY': return jsonObject.Bodies.Joints.HandTipLeft.Y;
+            case 'handTipRightX': return jsonObject.Bodies.Joints.HandTipRight.X;
+            case 'handTipRightY': return jsonObject.Bodies.Joints.HandTipRight.Y;
+            case 'headX': return jsonObject.Bodies.Joints.Head.X;
+            case 'headY': return jsonObject.Bodies.Joints.Head.Y;
+            case 'hipLeftX': return jsonObject.Bodies.Joints.HipLeft.X;
+            case 'hipLeftY': return jsonObject.Bodies.Joints.HipLeft.Y;
+            case 'hipRightX': return jsonObject.Bodies.Joints.HipRight.X;
+            case 'hipRightY': return jsonObject.Bodies.Joints.HipRight.Y;
+            case 'kneeLeftX': return jsonObject.Bodies.Joints.KneeLeft.X;
+            case 'kneeLeftY': return jsonObject.Bodies.Joints.KneeLeft.Y;
+            case 'kneeRightX': return jsonObject.Bodies.Joints.KneeRight.X;
+            case 'kneeRightY': return jsonObject.Bodies.Joints.KneeRight.Y;
+            case 'neckX': return jsonObject.Bodies.Joints.Neck.X;
+            case 'neckY': return jsonObject.Bodies.Joints.Neck.Y;
+            case 'shoulderLeftX': return jsonObject.Bodies.Joints.ShoulderLeft.X;
+            case 'shoulderLeftY': return jsonObject.Bodies.Joints.ShoulderLeft.Y;
+            case 'shoulderRightX': return jsonObject.Bodies.Joints.ShoulderRight.X;
+            case 'shoulderRightY': return jsonObject.Bodies.Joints.ShoulderRight.Y;
+            case 'spineBaseX': return jsonObject.Bodies.Joints.SpineBase.X;
+            case 'spineBaseY': return jsonObject.Bodies.Joints.SpineBase.Y;
+            case 'spineMidX': return jsonObject.Bodies.Joints.SpineMid.X;
+            case 'spineMidY': return jsonObject.Bodies.Joints.SpineMid.Y;
+            case 'spineShoulderX': return jsonObject.Bodies.Joints.SpineShoulder.X;
+            case 'spineShoulderY': return jsonObject.Bodies.Joints.SpineShoulder.Y;
+            case 'thumbLeftX': return jsonObject.Bodies.Joints.ThumbLeft.X;
+            case 'thumbLeftY': return jsonObject.Bodies.Joints.ThumbLeft.Y;
+            case 'thumbRightX': return jsonObject.Bodies.Joints.ThumbRight.X;
+            case 'thumbRightY': return jsonObject.Bodies.Joints.ThumbRight.Y;
+            case 'wristLeftX': return jsonObject.Bodies.Joints.WristLeft.X;
+            case 'wristLeftY': return jsonObject.Bodies.Joints.WristLeft.Y;
+            case 'wristRightX': return jsonObject.Bodies.Joints.WristRight.X;
+            case 'wristRightY': return jsonObject.Bodies.Joints.WristRight.Y;
         }
     };
 
