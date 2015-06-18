@@ -89,8 +89,8 @@
 
     ext.k = function(m) {
         switch(m){
-            case 'ankleLeftX': return jsonObject.bodies.joints.ankleLeft.X;
-            case 'ankleLeftY': return jsonObject.bodies.joints.ankleLeft.Y;
+            case 'ankleLeftX': return jsonObject.bodies.joints[0].X;
+            case 'ankleLeftY': return jsonObject.bodies.joints[0].Y;
 //            case 'ankleRightX': return jsonObject.bodies.joints.ankleRight.X;
 //            case 'ankleRightY': return jsonObject.bodies.Joints.AnkleRight.Y;
 //            case 'elbowLeftX': return jsonObject.bodies.Joints.ElbowLeft.X;
@@ -109,8 +109,8 @@
 //            case 'handTipLeftY': return jsonObject.Bodies.Joints.HandTipLeft.Y;
 //            case 'handTipRightX': return jsonObject.Bodies.Joints.HandTipRight.X;
 //            case 'handTipRightY': return jsonObject.Bodies.Joints.HandTipRight.Y;
-            case 'headX': return jsonObject.bodies.joints.head.X;
-            case 'headY': return jsonObject.bodies.joints.head.Y;
+            case 'headX': return jsonObject.bodies.joints[10].X;
+            case 'headY': return jsonObject.bodies.joints[10].Y;
 //            case 'hipLeftX': return jsonObject.Bodies.Joints.HipLeft.X;
 //            case 'hipLeftY': return jsonObject.Bodies.Joints.HipLeft.Y;
 //            case 'hipRightX': return jsonObject.Bodies.Joints.HipRight.X;
