@@ -68,6 +68,7 @@
 			['r', '%n ^ %n', 'power', 2, 3],
             ['r', '%m.k', 'k', 'headX'],
             ['', 'Restart connection', 'restart'],
+            ['', 'test block', 'test_block']
         ],
         
         menus: {
@@ -86,6 +87,10 @@
     ext.power = function(base, exponent) {
         return Math.pow(base, exponent);
     };
+    
+    ext.test_block = function() {
+        console.log(jsonObject.bodies.joints[10].X;);
+    }
 
     ext.k = function(m) {
         switch(m){
