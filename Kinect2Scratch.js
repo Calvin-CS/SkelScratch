@@ -89,7 +89,7 @@
     };
     
     ext.test_block = function() {
-        console.log(jsonObject.bodies.joints[10].x);
+        console.log(jsonObject.bodies);
     };
 
     ext.k = function(m) {
