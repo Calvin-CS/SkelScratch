@@ -67,7 +67,7 @@
 			['', 'My First Block', 'my_first_block'],
 			['r', '%n ^ %n', 'power', 2, 3],
             ['r', '%m.k sensor value', 'k', 'headX'],
-            ['', 'Restart connection', 'restart'],
+            ['', 'restart connection', 'restart'],
             ['', 'test block', 'test_block']
         ],
         
