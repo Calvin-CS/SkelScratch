@@ -89,7 +89,7 @@
     };
     
     ext.test_block = function() {
-        console.log(jsonObject.bodies[0].joints[3]);
+        console.log(jsonObject.bodies[0].joints[3].x);
     };
 
     ext.k = function(m) {
@@ -114,7 +114,7 @@
 //            case 'handTipLeftY': return jsonObject.Bodies.Joints.HandTipLeft.Y;
 //            case 'handTipRightX': return jsonObject.Bodies.Joints.HandTipRight.X;
 //            case 'handTipRightY': return jsonObject.Bodies.Joints.HandTipRight.Y;
-            case 'headX': return jsonObject.bodies.joints[10].X;
+            case 'headX': return jsonObject.bodies[0].joints[3].X;
             case 'headY': return jsonObject.bodies.joints[10].Y;
 //            case 'hipLeftX': return jsonObject.Bodies.Joints.HipLeft.X;
 //            case 'hipLeftY': return jsonObject.Bodies.Joints.HipLeft.Y;
