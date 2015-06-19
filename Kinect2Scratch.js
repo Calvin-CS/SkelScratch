@@ -3,6 +3,8 @@
     var firstTime = true;
     var boolean = true;
     var jsonObject = null;
+    var xScale = 240;
+    var yScale = 180;
     //var headX = 0;
     
     alert("BEFORE CLICKING OK<br/>Make sure you have have followed the instructions in Kinect2Scratch");
@@ -66,7 +68,7 @@
         blocks: [
 			['', 'My First Block', 'my_first_block'],
 			['r', '%n ^ %n', 'power', 2, 3],
-            ['r', '%m.k sensor value', 'k', 'headX'],
+            ['r', '%m.k sensor value', 'k', 'Head X'],
             ['', 'restart connection', 'restart'],
             ['', 'test block', 'test_block']
         ],
@@ -94,56 +96,56 @@
 
     ext.k = function(m) {
         switch(m){
-            case 'Left Ankle X': return jsonObject.bodies[0].joints[14].x;
-            case 'Left Ankle Y': return jsonObject.bodies[0].joints[14].x;
-            case 'Right Ankle X': return jsonObject.bodies[0].joints[18].x;
-            case 'Right Ankle Y': return jsonObject.bodies[0].joints[18].x;
-            case 'Left Elbow X': return jsonObject.bodies[0].joints[5].x;
-            case 'Left Elbow Y': return jsonObject.bodies[0].joints[5].x;
-            case 'Right Elbow X': return jsonObject.bodies[0].joints[9].x;
-            case 'Right Elbow Y': return jsonObject.bodies[0].joints[9].x;
-            case 'Left Foot X': return jsonObject.bodies[0].joints[15].x;
-            case 'Left Foot Y': return jsonObject.bodies[0].joints[15].x;
-            case 'Right Foot X': return jsonObject.bodies[0].joints[19].x;
-            case 'Right Foot Y': return jsonObject.bodies[0].joints[19].x;
-            case 'Left Hand X': return jsonObject.bodies[0].joints[7].x;
-            case 'Left Hand Y': return jsonObject.bodies[0].joints[7].x;
-            case 'Right Hand X': return jsonObject.bodies[0].joints[11].x;
-            case 'Right Hand Y': return jsonObject.bodies[0].joints[11].x;
-            case 'Left Hand Tip X': return jsonObject.bodies[0].joints[21].x;
-            case 'Left Hand Tip Y': return jsonObject.bodies[0].joints[21].x;
-            case 'Right Hand Tip X': return jsonObject.bodies[0].joints[23].x;
-            case 'Right Hand Tip Y': return jsonObject.bodies[0].joints[23].x;
-            case 'Head X': return jsonObject.bodies[0].joints[3].x;
-            case 'Head Y': return jsonObject.bodies[0].joints[3].x;
-            case 'Left Hip X': return jsonObject.bodies[0].joints[12].x;
-            case 'Left Hip Y': return jsonObject.bodies[0].joints[12].x;
-            case 'Right Hip X': return jsonObject.bodies[0].joints[16].x;
-            case 'Right Hip Y': return jsonObject.bodies[0].joints[16].x;
-            case 'Left Knee X': return jsonObject.bodies[0].joints[13].x;
-            case 'Left Knee Y': return jsonObject.bodies[0].joints[13].x;
-            case 'Right Knee X': return jsonObject.bodies[0].joints[17].x;
-            case 'Right Knee Y': return jsonObject.bodies[0].joints[17].x;
-            case 'Neck X': return jsonObject.bodies[0].joints[2].x;
-            case 'Neck Y': return jsonObject.bodies[0].joints[2].x;
-            case 'Left Shoulder X': return jsonObject.bodies[0].joints[4].x;
-            case 'Left Shoulder Y': return jsonObject.bodies[0].joints[4].x;
-            case 'Right Shoulder X': return jsonObject.bodies[0].joints[8].x;
-            case 'Right Shoulder Y': return jsonObject.bodies[0].joints[8].x;
-            case 'Spine Base X': return jsonObject.bodies[0].joints[0].x;
-            case 'Spine Base Y': return jsonObject.bodies[0].joints[0].x;
-            case 'Spine Middle X': return jsonObject.bodies[0].joints[1].x;
-            case 'Spine Middle Y': return jsonObject.bodies[0].joints[1].x;
-            case 'Spine Shoulder X': return jsonObject.bodies[0].joints[20].x;
-            case 'Spine Shoulder Y': return jsonObject.bodies[0].joints[20].x;
-            case 'Left Thumb X': return jsonObject.bodies[0].joints[22].x;
-            case 'Left Thumb Y': return jsonObject.bodies[0].joints[22].x;
-            case 'Right Thumb X': return jsonObject.bodies[0].joints[24].x;
-            case 'Right Thumb Y': return jsonObject.bodies[0].joints[24].x;
-            case 'Left Wrist X': return jsonObject.bodies[0].joints[6].x;
-            case 'Left Wrist Y': return jsonObject.bodies[0].joints[6].x;
-            case 'Right Wrist X': return jsonObject.bodies[0].joints[10].x;
-            case 'Right Wrist Y': return jsonObject.bodies[0].joints[10].x;
+            case 'Left Ankle X': return jsonObject.bodies[0].joints[14].x*xScale;
+            case 'Left Ankle Y': return jsonObject.bodies[0].joints[14].y*yScale;
+            case 'Right Ankle X': return jsonObject.bodies[0].joints[18].x*xScale;
+            case 'Right Ankle Y': return jsonObject.bodies[0].joints[18].y*yScale;
+            case 'Left Elbow X': return jsonObject.bodies[0].joints[5].x*xScale;
+            case 'Left Elbow Y': return jsonObject.bodies[0].joints[5].y*yScale;
+            case 'Right Elbow X': return jsonObject.bodies[0].joints[9].x*xScale;
+            case 'Right Elbow Y': return jsonObject.bodies[0].joints[9].y*yScale;
+            case 'Left Foot X': return jsonObject.bodies[0].joints[15].x*xScale;
+            case 'Left Foot Y': return jsonObject.bodies[0].joints[15].y*yScale;
+            case 'Right Foot X': return jsonObject.bodies[0].joints[19].x*xScale;
+            case 'Right Foot Y': return jsonObject.bodies[0].joints[19].y*yScale;
+            case 'Left Hand X': return jsonObject.bodies[0].joints[7].x*xScale;
+            case 'Left Hand Y': return jsonObject.bodies[0].joints[7].y*yScale;
+            case 'Right Hand X': return jsonObject.bodies[0].joints[11].x*xScale;
+            case 'Right Hand Y': return jsonObject.bodies[0].joints[11].y*yScale;
+            case 'Left Hand Tip X': return jsonObject.bodies[0].joints[21].x*xScale;
+            case 'Left Hand Tip Y': return jsonObject.bodies[0].joints[21].y*yScale;
+            case 'Right Hand Tip X': return jsonObject.bodies[0].joints[23].x*xScale;
+            case 'Right Hand Tip Y': return jsonObject.bodies[0].joints[23].y*yScale;
+            case 'Head X': return jsonObject.bodies[0].joints[3].x*xScale;
+            case 'Head Y': return jsonObject.bodies[0].joints[3].y*yScale;
+            case 'Left Hip X': return jsonObject.bodies[0].joints[12].x*xScale;
+            case 'Left Hip Y': return jsonObject.bodies[0].joints[12].y*yScale;
+            case 'Right Hip X': return jsonObject.bodies[0].joints[16].x*xScale;
+            case 'Right Hip Y': return jsonObject.bodies[0].joints[16].y*yScale;
+            case 'Left Knee X': return jsonObject.bodies[0].joints[13].x*xScale;
+            case 'Left Knee Y': return jsonObject.bodies[0].joints[13].y*yScale;
+            case 'Right Knee X': return jsonObject.bodies[0].joints[17].x*xScale;
+            case 'Right Knee Y': return jsonObject.bodies[0].joints[17].y*yScale;
+            case 'Neck X': return jsonObject.bodies[0].joints[2].x*xScale;
+            case 'Neck Y': return jsonObject.bodies[0].joints[2].y*yScale;
+            case 'Left Shoulder X': return jsonObject.bodies[0].joints[4].x*xScale;
+            case 'Left Shoulder Y': return jsonObject.bodies[0].joints[4].y*yScale;
+            case 'Right Shoulder X': return jsonObject.bodies[0].joints[8].x*xScale;
+            case 'Right Shoulder Y': return jsonObject.bodies[0].joints[8].y*yScale;
+            case 'Spine Base X': return jsonObject.bodies[0].joints[0].x*xScale;
+            case 'Spine Base Y': return jsonObject.bodies[0].joints[0].x*xScale;
+            case 'Spine Middle X': return jsonObject.bodies[0].joints[1].y*yScale;
+            case 'Spine Middle Y': return jsonObject.bodies[0].joints[1].x*xScale;
+            case 'Spine Shoulder X': return jsonObject.bodies[0].joints[20].y*yScale;
+            case 'Spine Shoulder Y': return jsonObject.bodies[0].joints[20].x*xScale;
+            case 'Left Thumb X': return jsonObject.bodies[0].joints[22].y*yScale;
+            case 'Left Thumb Y': return jsonObject.bodies[0].joints[22].x*xScale;
+            case 'Right Thumb X': return jsonObject.bodies[0].joints[24].y*yScale;
+            case 'Right Thumb Y': return jsonObject.bodies[0].joints[24].x*xScale;
+            case 'Left Wrist X': return jsonObject.bodies[0].joints[6].y*yScale;
+            case 'Left Wrist Y': return jsonObject.bodies[0].joints[6].y*yScale;
+            case 'Right Wrist X': return jsonObject.bodies[0].joints[10].x*xScale;
+            case 'Right Wrist Y': return jsonObject.bodies[0].joints[10].y*yScale;
 //            case 'ankleLeftX': return jsonObject.bodies[0].joints[14].x;
 //            case 'ankleLeftY': return jsonObject.bodies[0].joints[14].y;
 //            case 'ankleRightX': return jsonObject.bodies[0].joints[18].x;
@@ -192,7 +194,7 @@
 //            case 'thumbRightY': return jsonObject.bodies[0].joints[24].y;
 //            case 'wristLeftX': return jsonObject.bodies[0].joints[6].x;
 //            case 'wristLeftY': return jsonObject.bodies[0].joints[6].y;
-//            case 'wristRightX': return jsonObject.bodies[0].joints[10].x
+//            case 'wristRightX': return jsonObject.bodies[0].joints[10].x;
 //            case 'wristRightY': return jsonObject.bodies[0].joints[10].y;
         }
     };
