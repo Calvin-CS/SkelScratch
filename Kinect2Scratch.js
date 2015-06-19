@@ -39,10 +39,11 @@
         // Block and block menu descriptions
     var descriptor = {
         blocks: [
-			['', 'My First Block', 'my_first_block'],
-			['r', '%n ^ %n', 'power', 2, 3],
+            ['', 'My First Block', 'my_first_block'],
+            ['r', '%n ^ %n', 'power', 2, 3],
             ['r', '%m.k sensor value', 'k', 'Head X'],
             ['', 'start connection', 'start'],
+            ['', 'end connection', 'end'],
             ['', 'test block', 'test_block']
         ],
         
@@ -84,6 +85,10 @@
     };
     
     };
+    
+    ext.end = function() {
+        ws.close();
+    }
 	
     ext.power = function(base, exponent) {
         return Math.pow(base, exponent);
