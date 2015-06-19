@@ -5,7 +5,7 @@
     var jsonObject = null;
     var xScale = 240;
     var yScale = 180;
-    var status = 0;
+    var status = 2;
     //var headX = 0;
     
     alert("BEFORE CLICKING OK: Make sure you have have followed the instructions in Kinect2Scratch");
@@ -24,7 +24,7 @@
         if(evt != "0")
         {
         jsonObject = JSON.parse(evt.data);
-            if(jsonObject.bodies = null)
+            if(jsonObject.bodies == null)
             {
                 status = 1;
             } else 
