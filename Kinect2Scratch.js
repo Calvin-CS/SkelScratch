@@ -70,7 +70,6 @@
             ['r', '%n ^ %n', 'power', 2, 3],
             ['r', '%m.k sensor value', 'k', 'Head X'],
             ['', 'start connection', 'start'],
-            ['', 'end connection', 'end'],
             ['', 'test block', 'test_block']
         ],
         
@@ -83,7 +82,7 @@
         console.log("My first block");
     };
         
-    ext.restart = function() {
+    ext.start = function() {
         console.log("connecting to server ..");
         ws.open();
     };
