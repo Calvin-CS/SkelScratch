@@ -5,10 +5,11 @@
     var jsonObject = null;
     var xScale = 240;
     var yScale = 180;
+    var status = 0;
     //var headX = 0;
     
-    //alert("BEFORE CLICKING OK: Make sure you have have followed the instructions in Kinect2Scratch");
-    //console.log("Right after the alert");
+    alert("BEFORE CLICKING OK: Make sure you have have followed the instructions in Kinect2Scratch");
+    console.log("Right after the alert");
     
     var wsImpl = window.WebSocket || window.MozWebSocket;
      
@@ -23,6 +24,13 @@
         if(evt != "0")
         {
         jsonObject = JSON.parse(evt.data);
+            if(jsonObject.bodies = null)
+            {
+                status = 1;
+            } else 
+            {
+                status = 2;
+            }
         }
         //headX = parseInt(evt.data);
     };
@@ -30,11 +38,13 @@
     // when the connection is established, this method is called
     ws.onopen = function () {
         console.log('.. connection open');
+        //status = 1;
     };
 
     // when the connection is closed, this method is called
     ws.onclose = function () {
         console.log('.. connection closed');
+        status = 0;
     };
 
     // Cleanup function when the extension is unloaded
@@ -44,22 +54,19 @@
     // Status reporting code
     // Use this to report missing hardware, plugin or unsupported browser
     ext._getStatus = function() {
-        //// Check for the various File API support.
-        //if (window.File && window.FileReader && window.FileList && window.Blob) {
-        //    return {status: 2, msg: 'Ready'};
-        //} else {
-        //    return {status: 0, msg: 'The File APIs are not fully supported by your browser.'};
-        //}
-        //if(firstTime)
-        //{
-        //console.log("text 3");
-        //firstTime = false;
-        //}
-        //if(boolean)
-        //{
-        //    return {status: 1, msg: 'Not ready yet.'};
-        //}
-        return {status: 2, msg: 'Ready'};
+        if(status == 0)
+        {
+            return {status: 0, msg: 'Kinect is not connected'};
+            //polling function for auto-reconnect should go here
+        }
+        if(status == 1)
+        {
+            return {status: 1, msg: 'Kinect is connected, but is not detecting any bodies'};
+        }
+        if(status == 2)
+        {
+            return {status: 2, msg: 'Kinect is sending body data'};
+        }
         
     };
     
@@ -69,7 +76,7 @@
             ['', 'My First Block', 'my_first_block'],
             ['r', '%n ^ %n', 'power', 2, 3],
             ['r', '%m.k sensor value', 'k', 'Head X'],
-            ['', 'start connection', 'start'],
+            ['', 'restart connection', 'restart'],
             ['', 'test block', 'test_block']
         ],
         
@@ -82,9 +89,9 @@
         console.log("My first block");
     };
         
-    ext.start = function() {
+    ext.restart = function() {
         console.log("connecting to server ..");
-        ws.open();
+        window.ws = new wsImpl('ws://localhost:8181/');
     };
 	
     ext.power = function(base, exponent) {
