@@ -9,6 +9,33 @@
     
     //alert("BEFORE CLICKING OK: Make sure you have have followed the instructions in Kinect2Scratch");
     //console.log("Right after the alert");
+    
+    var wsImpl = window.WebSocket || window.MozWebSocket;
+     
+    console.log("connecting to server ..");
+
+    // create a new websocket and connect
+    window.ws = new wsImpl('ws://localhost:8181/');
+
+    // when data is comming from the server, this metod is called
+    ws.onmessage = function (evt) {
+        //console.log(evt.data + '<br/>');
+        if(evt != "0")
+        {
+        jsonObject = JSON.parse(evt.data);
+        }
+        //headX = parseInt(evt.data);
+    };
+
+    // when the connection is established, this method is called
+    ws.onopen = function () {
+        console.log('.. connection open');
+    };
+
+    // when the connection is closed, this method is called
+    ws.onclose = function () {
+        console.log('.. connection closed');
+    };
 
     // Cleanup function when the extension is unloaded
     ext._shutdown = function() {};
@@ -56,39 +83,10 @@
         console.log("My first block");
     };
         
-    ext.start = function() {
-        var wsImpl = window.WebSocket || window.MozWebSocket;
-     
-        console.log("connecting to server ..<br/>");
-
-        // create a new websocket and connect
-        window.ws = new wsImpl('ws://localhost:8181/');
-
-        // when data is comming from the server, this metod is called
-        ws.onmessage = function (evt) {
-        //console.log(evt.data + '<br/>');
-        if(evt != "0")
-        {
-        jsonObject = JSON.parse(evt.data);
-        }
-        //headX = parseInt(evt.data);
+    ext.restart = function() {
+        console.log("connecting to server ..");
+        ws.open();
     };
-
-    // when the connection is established, this method is called
-    ws.onopen = function () {
-        console.log('.. connection open<br/>');
-    };
-
-    // when the connection is closed, this method is called
-    ws.onclose = function () {
-        console.log('.. connection closed<br/>');
-    };
-    
-    };
-    
-    ext.end = function() {
-        ws.close();
-    }
 	
     ext.power = function(base, exponent) {
         return Math.pow(base, exponent);
