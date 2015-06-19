@@ -24,7 +24,7 @@
         if(evt != "0")
         {
         jsonObject = JSON.parse(evt.data);
-            if(jsonObject.bodies == null)
+            if(jsonObject == {"bodies":[]})
             {
                 status = 1;
             } else 
