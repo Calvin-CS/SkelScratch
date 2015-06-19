@@ -7,7 +7,7 @@
     var yScale = 180;
     //var headX = 0;
     
-    alert("BEFORE CLICKING OK<br/>Make sure you have have followed the instructions in Kinect2Scratch");
+    alert("BEFORE CLICKING OK: Make sure you have have followed the instructions in Kinect2Scratch");
     console.log("Right after the alert");
     
     var wsImpl = window.WebSocket || window.MozWebSocket;
