@@ -56,7 +56,7 @@
     ext._getStatus = function() {
         if(status == 0)
         {
-            return {status: 0, msg: 'Kinect is not connected'};
+            return {status: 0, msg: 'Kinect is not connected to Scratch'};
             //polling function for auto-reconnect should go here
         }
         if(status == 1)
