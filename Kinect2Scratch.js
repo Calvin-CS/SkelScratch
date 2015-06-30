@@ -79,7 +79,8 @@
             ['b', 'connected', 'connected'],
             ['b', 'body tracked', 'tracked'],
             ['', 'console.log %n', 'write'],
-            ['r', '%m.k sensor value no m', 'kNM', 'Head X']
+            ['r', '%m.k sensor value no m', 'kNM', 'Head X'],
+            ['', 'bad only %n', 'writeB']
         ],
         
         menus: {
@@ -130,9 +131,13 @@
         console.log(m);
     };
     
-    ext.write = function(m){
-        console.log(m);
+    ext.writeB = function(m){
+        if(m == 0)
+        {
+            console.log("bad");
+        }
     };
+
 
     ext.kNM = function(m) {
         switch(m){
