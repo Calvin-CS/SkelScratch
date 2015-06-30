@@ -150,7 +150,7 @@
             case 'Right Hand Tip Y': return jsonObject.bodies[0].joints[23].y*yScale;
             case 'Head X':
             temp = jsonObject.bodies[0].joints[3].x*xScale;
-            if(temp != 0)
+            if(temp < -1 || temp > 1)
             {
                 joints[3] = temp;
             }
