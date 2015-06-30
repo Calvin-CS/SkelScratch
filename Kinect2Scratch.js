@@ -79,7 +79,7 @@
             ['', 'test block', 'test_block'],
             ['b', 'connected', 'connected'],
             ['b', 'body tracked', 'tracked'],
-            ['', 'console.log %m', 'write']
+            ['', 'console.log %n', 'write']
         ],
         
         menus: {
