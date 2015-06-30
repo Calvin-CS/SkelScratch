@@ -148,13 +148,7 @@
             case 'Left Hand Tip Y': return jsonObject.bodies[0].joints[21].y*yScale;
             case 'Right Hand Tip X': return jsonObject.bodies[0].joints[23].x*xScale;
             case 'Right Hand Tip Y': return jsonObject.bodies[0].joints[23].y*yScale;
-            case 'Head X':
-            temp = jsonObject.bodies[0].joints[3].x*xScale;
-            if(temp < -1 || temp > 1)
-            {
-                joints[3] = temp;
-            }
-            return joints[3];
+            case 'Head X': return jsonObject.bodies[0].joints[3].x*xScale;
             case 'Head Y': return jsonObject.bodies[0].joints[3].y*yScale;
             case 'Left Hip X': return jsonObject.bodies[0].joints[12].x*xScale;
             case 'Left Hip Y': return jsonObject.bodies[0].joints[12].y*yScale;
