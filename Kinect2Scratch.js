@@ -7,7 +7,6 @@
     var yScale = 180;
     var status = 1;
     var joints = [];
-    //var headX = 0;
     
     alert("BEFORE CLICKING OK: Make sure you have have followed the instructions in Kinect2Scratch");
     console.log("Right after the alert");
@@ -32,7 +31,6 @@
             {
                 status = 2;
             }
-        //headX = parseInt(evt.data);
         }
     };
 
@@ -130,8 +128,13 @@
     ext.k = function(m) {
         var temp = 0;
         switch(m){
-            case 'Left Ankle X': temp = jsonObject.bodies[0].joints[14].x*xScale;
-            if(temp != 0){joints[14] = 0;} return joints[14];
+            case 'Left Ankle X':
+                temp = jsonObject.bodies[0].joints[14].x*xScale;
+            if(temp != 0)
+            {
+                joints[14] = temp;
+            }
+            return joints[14];
             case 'Left Ankle Y': return jsonObject.bodies[0].joints[14].y*yScale;
             case 'Right Ankle X': return jsonObject.bodies[0].joints[18].x*xScale;
             case 'Right Ankle Y': return jsonObject.bodies[0].joints[18].y*yScale;
