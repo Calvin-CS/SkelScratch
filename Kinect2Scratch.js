@@ -77,7 +77,9 @@
             ['r', '%n ^ %n', 'power', 2, 3],
             ['r', '%m.k sensor value', 'k', 'Head X'],
             ['', 'restart connection', 'restart'],
-            ['', 'test block', 'test_block']
+            ['', 'test block', 'test_block'],
+            ['b', 'connected', 'connected'],
+            ['b', 'body tracked', 'tracked']
         ],
         
         menus: {
@@ -100,6 +102,28 @@
     
     ext.test_block = function() {
         console.log(jsonObject.bodies[0].joints[3].x);
+    };
+    
+        ext.connected = function()
+    {
+        if(status == 0){
+            return false;
+        }
+        
+        if(status == 1 || 2){
+            return true;
+        }
+    };
+    
+    ext.tracked = function()
+    {
+        if(status == (0 || 1)){
+            return false;
+        }
+        
+        if(status == 2){
+            return true;
+        }
     };
 
     ext.k = function(m) {
