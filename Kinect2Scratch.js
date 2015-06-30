@@ -78,7 +78,8 @@
             ['', 'restart connection', 'restart'],
             ['', 'test block', 'test_block'],
             ['b', 'connected', 'connected'],
-            ['b', 'body tracked', 'tracked']
+            ['b', 'body tracked', 'tracked'],
+            ['', 'console.log %m', 'write']
         ],
         
         menus: {
@@ -124,6 +125,10 @@
             return true;
         }
     };
+    
+    ext.write = function(m){
+        console.log(m);
+    }
 
     ext.k = function(m) {
         var temp = 0;
