@@ -128,13 +128,7 @@
     ext.k = function(m) {
         var temp = 0;
         switch(m){
-            case 'Left Ankle X':
-                temp = jsonObject.bodies[0].joints[14].x*xScale;
-            if(temp != 0)
-            {
-                joints[14] = temp;
-            }
-            return joints[14];
+            case 'Left Ankle X': return jsonObject.bodies[0].joints[14].x*xScale;
             case 'Left Ankle Y': return jsonObject.bodies[0].joints[14].y*yScale;
             case 'Right Ankle X': return jsonObject.bodies[0].joints[18].x*xScale;
             case 'Right Ankle Y': return jsonObject.bodies[0].joints[18].y*yScale;
@@ -154,7 +148,13 @@
             case 'Left Hand Tip Y': return jsonObject.bodies[0].joints[21].y*yScale;
             case 'Right Hand Tip X': return jsonObject.bodies[0].joints[23].x*xScale;
             case 'Right Hand Tip Y': return jsonObject.bodies[0].joints[23].y*yScale;
-            case 'Head X': return jsonObject.bodies[0].joints[3].x*xScale;
+            case 'Head X':
+            temp = jsonObject.bodies[0].joints[3].x*xScale;
+            if(temp != 0)
+            {
+                joints[3] = temp;
+            }
+            return joints[3];
             case 'Head Y': return jsonObject.bodies[0].joints[3].y*yScale;
             case 'Left Hip X': return jsonObject.bodies[0].joints[12].x*xScale;
             case 'Left Hip Y': return jsonObject.bodies[0].joints[12].y*yScale;
