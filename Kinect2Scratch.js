@@ -20,8 +20,8 @@
     // when data is comming from the server, this metod is called
     ws.onmessage = function (evt) {
         //console.log(evt.data + '<br/>');
-        if(evt != "0")
-        {
+        //if(evt != "0")
+        //{
         jsonObject = JSON.parse(evt.data);
             if(jsonObject.bodies == '')
             {
@@ -30,7 +30,7 @@
             {
                 status = 2;
             }
-        }
+        //}
     };
 
     // when the connection is established, this method is called
