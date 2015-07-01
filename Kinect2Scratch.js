@@ -3,8 +3,8 @@
     var firstTime = true;
     var boolean = true;
     var jsonObject = null;
-    var xScale = 240;
-    var yScale = 180;
+    var xScale = 280;
+    var yScale = 210;
     var status = 1;
     
     alert("BEFORE CLICKING OK: Make sure you have have followed the instructions in Kinect2Scratch");
@@ -26,7 +26,7 @@
             if(jsonObject.bodies == '')
             {
                 status = 1;
-            } else 
+            } else
             {
                 status = 2;
             }
