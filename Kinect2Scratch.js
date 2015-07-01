@@ -19,9 +19,6 @@
 
     // when data is comming from the server, this metod is called
     ws.onmessage = function (evt) {
-        //console.log(evt.data + '<br/>');
-        //if(evt != "0")
-        //{
         jsonObject = JSON.parse(evt.data);
             if(jsonObject.bodies == '')
             {
@@ -30,13 +27,11 @@
             {
                 status = 2;
             }
-        //}
     };
 
     // when the connection is established, this method is called
     ws.onopen = function () {
         console.log('.. connection open');
-        //status = 1;
     };
 
     // when the connection is closed, this method is called
