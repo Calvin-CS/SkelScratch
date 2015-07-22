@@ -181,7 +181,7 @@
             case 'Body 6': i=5;
         }
         
-        switch(m)
+        switch(n)
         {
             case 'Unknown': j = 0;
             case 'Not Tracked': j = 1;
@@ -206,7 +206,7 @@
             case 'Body 6': i=5;
         }
         
-        switch(m)
+        switch(n)
         {
             case 'Unknown': j = 0;
             case 'Not Tracked': j = 1;
