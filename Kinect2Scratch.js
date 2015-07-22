@@ -76,12 +76,15 @@
             ['b', 'body tracked', 'tracked'],
             ['', 'console.log %n', 'write'],
             ['', 'bad only %n', 'writeB'],
-            ['r', '%m.l id', 'l', 'Body 1']
+            ['r', '%m.l id', 'l', 'Body 1'],
+            ['b', '%m.l Left Handstate is %m.n', 'lhand'],
+            ['b', '%m.l Right Handstate is %m.n', 'rhand']
         ],
         
         menus: {
 	    k: ['Left Ankle X', 'Left Ankle Y', 'Right Ankle X', 'Right Ankle Y', 'Left Elbow X', 'Left Elbow Y', 'Right Elbow X', 'Right Elbow Y', 'Left Foot X', 'Left Foot Y', 'Right Foot X', 'Right Foot Y', 'Left Hand X', 'Left Hand Y', 'Right Hand X', 'Right Hand Y', 'Left Hand Tip X', 'Left Hand Tip Y', 'Right Hand Tip X', 'Right Hand Tip Y', 'Head X', 'Head Y', 'Left Hip X', 'Left Hip Y', 'Right Hip X', 'Right Hip Y', 'Left Knee X', 'Left Knee Y', 'Right Knee X', 'Right Knee Y', 'Neck X', 'Neck Y', 'Left Shoulder X', 'Left Shoulder Y', 'Right Shoulder X', 'Right Shoulder Y', 'Spine Base X', 'Spine Base Y', 'Spine Middle X', 'Spine Middle Y', 'Spine Shoulder X', 'Spine Shoulder Y', 'Left Thumb X', 'Left Thumb Y', 'Right Thumb X', 'Right Thumb Y', 'Left Wrist X', 'Left Wrist Y', 'Right Wrist X', 'Right Wrist Y'],
-        l: ['Body 1', 'Body 2']
+        l: ['Body 1', 'Body 2', 'Body 3', 'Body 4', 'Body 5', 'Body 6'],
+        n: ['Unknown', 'Not Tracked', 'Open', 'Closed', 'Lasso']
     }
     };
 
@@ -140,7 +143,61 @@
         switch(m){
             case 'Body 1': return jsonObject.bodies[0].id;
             case 'Body 2': return jsonObject.bodies[1].id;
+            case 'Body 3': return jsonObject.bodies[2].id;
+            case 'Body 4': return jsonObject.bodies[3].id;
+            case 'Body 5': return jsonObject.bodies[4].id;
+            case 'Body 6': return jsonObject.bodies[5].id; 
         }
+    }
+    
+    ext.lhand = function(l,m)
+    {
+        var i;
+        var j;
+        switch(l){
+            case 'Body 1': i=0;
+            case 'Body 2': i=1;
+            case 'Body 3': i=2;
+            case 'Body 4': i=3;
+            case 'Body 5': i=4;
+            case 'Body 6': i=5;
+        }
+        
+        switch(m)
+        {
+            case 'Unknown': j = 0;
+            case 'Not Tracked': j = 1;
+            case 'Open': j = 2;
+            case 'Closed': j = 3;
+            case 'Lasso': j = 4;
+        }
+        
+        return jsonObject.bodies[i].LState == j;
+    }
+    
+        ext.rhand = function(l,m)
+    {
+        var i;
+        var j;
+        switch(l){
+            case 'Body 1': i=0;
+            case 'Body 2': i=1;
+            case 'Body 3': i=2;
+            case 'Body 4': i=3;
+            case 'Body 5': i=4;
+            case 'Body 6': i=5;
+        }
+        
+        switch(m)
+        {
+            case 'Unknown': j = 0;
+            case 'Not Tracked': j = 1;
+            case 'Open': j = 2;
+            case 'Closed': j = 3;
+            case 'Lasso': j = 4;
+        }
+        
+        return jsonObject.bodies[i].RState == j;
     }
 
     ext.k1 = function(m) {
