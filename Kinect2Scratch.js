@@ -77,6 +77,7 @@
             ['', 'console.log %n', 'write'],
             ['', 'bad only %n', 'writeB'],
             ['r', '%m.l id', 'l', 'Body 1'],
+            ['r', '%m.l Left Handstate', 'lhandd', 'Body 1'],
             ['b', '%m.l Left Handstate is %m.n', 'lhand', 'Body 1', 'Closed'],
             ['b', '%m.l Right Handstate is %m.n', 'rhand', 'Body 1', 'Closed']
         ],
@@ -149,6 +150,23 @@
             case 'Body 6': return jsonObject.bodies[5].id; 
         }
     }
+    
+    ext.lhandd = function(l)
+    {
+        var i;
+        var j;
+        switch(l){
+            case 'Body 1': i=0;
+            case 'Body 2': i=1;
+            case 'Body 3': i=2;
+            case 'Body 4': i=3;
+            case 'Body 5': i=4;
+            case 'Body 6': i=5;
+        }
+        return jsonObject.bodies[i].LState;
+    }
+        
+       
     
     ext.lhand = function(l,m)
     {
