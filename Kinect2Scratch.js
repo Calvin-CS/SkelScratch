@@ -168,7 +168,7 @@
         
        
     
-    ext.lhand = function(l,m)
+    ext.lhand = function(l,n)
     {
         var i;
         var j;
@@ -193,7 +193,7 @@
         return jsonObject.bodies[i].LState == j;
     }
     
-        ext.rhand = function(l,m)
+        ext.rhand = function(l,n)
     {
         var i;
         var j;
