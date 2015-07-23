@@ -71,7 +71,7 @@
             ['r', '%n ^ %n', 'power', 2, 3],
             ['r', '%m.k body 1 sensor value', 'k', 'Head X'],
             ['r', '%m.k body 2 sensor value', 'k1', 'Head X'],
-            ['r', '%m.l %m.k1 %m.x', 'joints', 'Body 1', 'Head', 'x']
+            ['r', '%m.l %m.k1 %m.x', 'joints', 'Body 1', 'Head', 'x'],
             ['', 'restart connection', 'restart'],
             ['', 'test block', 'test_block'],
             ['b', 'connected', 'connected'],
