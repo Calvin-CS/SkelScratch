@@ -256,7 +256,7 @@
         return jsonObject.bodies[i].rhandstate == j;
     }
         
-    ext.joints = function(k1,l,x)
+    ext.joints = function(l,k1,x)
     {
         var a;
         var b;
