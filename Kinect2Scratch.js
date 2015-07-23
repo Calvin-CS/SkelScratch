@@ -169,7 +169,6 @@
             case 'Body 6': i=5;
                 break;
         }
-        //return jsonObject.bodies[i].id;
         return jsonObject.bodies[i].lhandstate;
     }
         
@@ -181,23 +180,34 @@
         var j;
         switch(l){
             case 'Body 1': i=0;
+                break;
             case 'Body 2': i=1;
+                break;
             case 'Body 3': i=2;
+                break;
             case 'Body 4': i=3;
+                break;
             case 'Body 5': i=4;
+                break;
             case 'Body 6': i=5;
+                break;
         }
         
         switch(n)
         {
             case 'Unknown': j = 0;
+                break;
             case 'Not Tracked': j = 1;
+                break;
             case 'Open': j = 2;
+                break;
             case 'Closed': j = 3;
+                break;
             case 'Lasso': j = 4;
+                break;
         }
         
-        return jsonObject.bodies[i].LState == j;
+        return jsonObject.bodies[i].lhandstate == j;
     }
     
         ext.rhand = function(l,n)
@@ -206,23 +216,34 @@
         var j;
         switch(l){
             case 'Body 1': i=0;
+                break;
             case 'Body 2': i=1;
+                break;
             case 'Body 3': i=2;
+                break;
             case 'Body 4': i=3;
+                break;
             case 'Body 5': i=4;
+                break;
             case 'Body 6': i=5;
+                break;
         }
         
         switch(n)
         {
             case 'Unknown': j = 0;
+                break;
             case 'Not Tracked': j = 1;
+                break;
             case 'Open': j = 2;
+                break;
             case 'Closed': j = 3;
+                break;
             case 'Lasso': j = 4;
+                break;
         }
         
-        return jsonObject.bodies[i].RState == j;
+        return jsonObject.bodies[i].rhandstate == j;
     }
 
     ext.k1 = function(m) {
