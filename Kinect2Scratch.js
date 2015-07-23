@@ -143,17 +143,11 @@
     {
         switch(m){
             case 'Body 1': return jsonObject.bodies[0].id;
-                break;
             case 'Body 2': return jsonObject.bodies[1].id;
-                break;
             case 'Body 3': return jsonObject.bodies[2].id;
-                break;
             case 'Body 4': return jsonObject.bodies[3].id;
-                break;
             case 'Body 5': return jsonObject.bodies[4].id;
-                break;
-            case 'Body 6': return jsonObject.bodies[5].id; 
-                break;
+            case 'Body 6': return jsonObject.bodies[5].id;
         }
     }
     
@@ -175,7 +169,8 @@
             case 'Body 6': i=5;
                 break;
         }
-        return jsonObject.bodies[i].lhandstate;
+        return jsonObject.bodies[i].id;
+        //return jsonObject.bodies[i].lhandstate;
     }
         
        
