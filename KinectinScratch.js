@@ -315,11 +315,17 @@
         
         switch(l){
             case 'Body 1': b=0;
+                break;
             case 'Body 2': b=1;
+                break;
             case 'Body 3': b=2;
+                break;
             case 'Body 4': b=3;
+                break;
             case 'Body 5': b=4;
+                break;
             case 'Body 6': b=5;
+                break;
         }
         
         switch(x){
