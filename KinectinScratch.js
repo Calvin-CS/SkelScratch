@@ -329,12 +329,9 @@
         }
         
         switch(x){
-            case 'x': return b;
-            case 'y': return a;
-            case 'z': return 3;
-            //case 'x': return jsonObject.bodies[b].joints[a].x*xScale;
-            //case 'y': return jsonObject.bodies[b].joints[a].y*yScale;
-            //case 'z': return jsonObject.bodies[b].joints[a].z*zScale;
+            case 'x': return jsonObject.bodies[b].joints[a].x*xScale;
+            case 'y': return jsonObject.bodies[b].joints[a].y*yScale;
+            case 'z': return jsonObject.bodies[b].joints[a].z*zScale;
         }
     }
 
