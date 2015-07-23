@@ -5,7 +5,7 @@
     var jsonObject = null;
     var xScale = 280;
     var yScale = 210;
-    var zScale = 200
+    var zScale = 200;
     var status = 1;
     
     alert("BEFORE CLICKING OK: Make sure you have have followed the instructions in Kinect2Scratch");
