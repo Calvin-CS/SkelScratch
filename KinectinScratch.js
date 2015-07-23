@@ -92,7 +92,8 @@
 	ext.my_first_block = function() {
         console.log("My first block");
     };
-        
+    
+    //restarts the client side of the server
     ext.restart = function() {
         console.log("connecting to server ..");
         window.ws = new wsImpl('ws://localhost:8181/');
@@ -106,6 +107,7 @@
         console.log(jsonObject.bodies[0].joints[3].x*xScale);
     };
     
+    //True if scratch is receiving the kinect (but not necessarily data)
         ext.connected = function()
     {
         if(status == 0){
@@ -117,6 +119,7 @@
         }
     };
     
+    //True if scratch is receiving body data
     ext.tracked = function()
     {
         if(status == (0 || 1)){
@@ -128,10 +131,12 @@
         }
     };
     
+    //Outputs numeric content to console
     ext.write = function(m){
         console.log(m);
     };
     
+    //Writes "bad" in console if the input is 0
     ext.writeB = function(m){
         if(m == 0)
         {
@@ -139,6 +144,7 @@
         }
     };
     
+    //Gives the id of the selected body
     ext.l = function(m)
     {
         switch(m){
@@ -171,9 +177,8 @@
         }
         return jsonObject.bodies[i].lhandstate;
     }
-        
-       
     
+    //Returns true if the selected bodies left handstate is the same as block selected one.
     ext.lhand = function(l,n)
     {
         var i;
@@ -210,6 +215,7 @@
         return jsonObject.bodies[i].lhandstate == j;
     }
     
+        //Returns true if the selected bodies right handstate is the same as block selected one.
         ext.rhand = function(l,n)
     {
         var i;
@@ -246,6 +252,7 @@
         return jsonObject.bodies[i].rhandstate == j;
     }
 
+    //returns the selected joint's x or y for the 1st body
     ext.k1 = function(m) {
         switch(m){
             case 'Left Ankle X': return jsonObject.bodies[1].joints[14].x*xScale;
@@ -301,6 +308,7 @@
         }
     };
     
+    //return the selected joints x or y for the 2nd body
     ext.k = function(m) {
         switch(m){
             case 'Left Ankle X': return jsonObject.bodies[0].joints[14].x*xScale;
