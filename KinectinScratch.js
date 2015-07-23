@@ -5,6 +5,7 @@
     var jsonObject = null;
     var xScale = 280;
     var yScale = 210;
+    var zScale = 200
     var status = 1;
     
     alert("BEFORE CLICKING OK: Make sure you have have followed the instructions in Kinect2Scratch");
@@ -70,6 +71,7 @@
             ['r', '%n ^ %n', 'power', 2, 3],
             ['r', '%m.k body 1 sensor value', 'k', 'Head X'],
             ['r', '%m.k body 2 sensor value', 'k1', 'Head X'],
+            ['r', '%m.l %m.k1 %m.x', 'joints', 'Body 1', 'Head', 'x']
             ['', 'restart connection', 'restart'],
             ['', 'test block', 'test_block'],
             ['b', 'connected', 'connected'],
@@ -83,9 +85,11 @@
         ],
         
         menus: {
-	    k: ['Left Ankle X', 'Left Ankle Y', 'Right Ankle X', 'Right Ankle Y', 'Left Elbow X', 'Left Elbow Y', 'Right Elbow X', 'Right Elbow Y', 'Left Foot X', 'Left Foot Y', 'Right Foot X', 'Right Foot Y', 'Left Hand X', 'Left Hand Y', 'Right Hand X', 'Right Hand Y', 'Left Hand Tip X', 'Left Hand Tip Y', 'Right Hand Tip X', 'Right Hand Tip Y', 'Head X', 'Head Y', 'Left Hip X', 'Left Hip Y', 'Right Hip X', 'Right Hip Y', 'Left Knee X', 'Left Knee Y', 'Right Knee X', 'Right Knee Y', 'Neck X', 'Neck Y', 'Left Shoulder X', 'Left Shoulder Y', 'Right Shoulder X', 'Right Shoulder Y', 'Spine Base X', 'Spine Base Y', 'Spine Middle X', 'Spine Middle Y', 'Spine Shoulder X', 'Spine Shoulder Y', 'Left Thumb X', 'Left Thumb Y', 'Right Thumb X', 'Right Thumb Y', 'Left Wrist X', 'Left Wrist Y', 'Right Wrist X', 'Right Wrist Y'],
+        k: ['Left Ankle X', 'Left Ankle Y', 'Right Ankle X', 'Right Ankle Y', 'Left Elbow X', 'Left Elbow Y', 'Right Elbow X', 'Right Elbow Y', 'Left Foot X', 'Left Foot Y', 'Right Foot X', 'Right Foot Y', 'Left Hand X', 'Left Hand Y', 'Right Hand X', 'Right Hand Y', 'Left Hand Tip X', 'Left Hand Tip Y', 'Right Hand Tip X', 'Right Hand Tip Y', 'Head X', 'Head Y', 'Left Hip X', 'Left Hip Y', 'Right Hip X', 'Right Hip Y', 'Left Knee X', 'Left Knee Y', 'Right Knee X', 'Right Knee Y', 'Neck X', 'Neck Y', 'Left Shoulder X', 'Left Shoulder Y', 'Right Shoulder X', 'Right Shoulder Y', 'Spine Base X', 'Spine Base Y', 'Spine Middle X', 'Spine Middle Y', 'Spine Shoulder X', 'Spine Shoulder Y', 'Left Thumb X', 'Left Thumb Y', 'Right Thumb X', 'Right Thumb Y', 'Left Wrist X', 'Left Wrist Y', 'Right Wrist X', 'Right Wrist Y'],
+	    k1: ['Left Ankle', 'Right Ankle', 'Left Elbow', 'Right Elbow', 'Left Foot', 'Right FootY', 'Left Hand', 'Right Hand', 'Left Hand Tip', 'Right Hand Tip', 'Head', 'Left Hip', 'Right Hip', 'Left Knee', 'Right Knee', 'Neck', 'Left Shoulder', 'Right Shoulder', 'Spine Base', 'Spine Middle', 'Spine Shoulder', 'Left Thumb', 'Right Thumb', 'Left Wrist', 'Right Wrist'],
         l: ['Body 1', 'Body 2', 'Body 3', 'Body 4', 'Body 5', 'Body 6'],
-        n: ['Unknown', 'Not Tracked', 'Open', 'Closed', 'Lasso']
+        n: ['Unknown', 'Not Tracked', 'Open', 'Closed', 'Lasso'],
+        x: ['x', 'y', 'z'],
     }
     };
 
@@ -251,6 +255,79 @@
         
         return jsonObject.bodies[i].rhandstate == j;
     }
+        
+    ext.joints = function(k1,l,x)
+    {
+        int a;
+        int b;
+        switch(k1){
+            case 'Left Ankle': a=14;
+                break;
+            case 'Right Ankle': a=18;
+                break;
+            case 'Left Elbow': a=5;
+                break;
+            case 'Right Elbow': a=9;
+                break;
+            case 'Left Foot': a=15;
+                break;
+            case 'Right Foot': a=19;
+                break;
+            case 'Left Hand': a=7;
+                break;
+            case 'Right Hand': a=11;
+                break;
+            case 'Left Hand Tip': a=21;
+                break;
+            case 'Right Hand Tip': a=23;
+                break;
+            case 'Head': a=3;
+                break;
+            case 'Left Hip': a=12;
+                break;
+            case 'Right Hip': a=16;
+                break;
+            case 'Left Knee': a=13;
+                break;
+            case 'Right Knee': a=17;
+                break;
+            case 'Neck': a=2;
+                break;
+            case 'Left Shoulder': a=4;
+                break;
+            case 'Right Shoulder': a=8;
+                break;
+            case 'Spine Base': a=0;
+                break;
+            case 'Spine Middle': a=1;
+                break;
+            case 'Spine Shoulder': a=20;
+                break;
+            case 'Left Thumb': a=22;
+                break;
+            case 'Right Thumb': a=24;
+                break;
+            case 'Left Wrist': a=6;
+                break;
+            case 'Right Wrist': a=10;
+                break;
+        }
+        
+        switch(l){
+            case 'Body 1': b=0;
+            case 'Body 2': b=1;
+            case 'Body 3': b=2;
+            case 'Body 4': b=3;
+            case 'Body 5': b=4;
+            case 'Body 6': b=5;
+        }
+        
+        switch(x){
+            case 'x': return jsonObject.bodies[b].joints[a].x*xScale;
+            case 'y': return jsonObject.bodies[b].joints[a].y*yScale;
+            case 'z': return jsonObject.bodies[b].joints[a].z*zScale;
+        }
+    }
 
     //returns the selected joint's x or y for the 1st body
     ext.k1 = function(m) {
@@ -291,8 +368,8 @@
             case 'Left Shoulder Y': return jsonObject.bodies[1].joints[4].y*yScale;
             case 'Right Shoulder X': return jsonObject.bodies[1].joints[8].x*xScale;
             case 'Right Shoulder Y': return jsonObject.bodies[1].joints[8].y*yScale;
-            case 'Spine Base X': return jsonObject.bodies[1].joints[1].x*xScale;
-            case 'Spine Base Y': return jsonObject.bodies[1].joints[1].y*yScale;
+            case 'Spine Base X': return jsonObject.bodies[1].joints[0].x*xScale;
+            case 'Spine Base Y': return jsonObject.bodies[1].joints[0].y*yScale;
             case 'Spine Middle X': return jsonObject.bodies[1].joints[1].x*xScale;
             case 'Spine Middle Y': return jsonObject.bodies[1].joints[1].y*yScale;
             case 'Spine Shoulder X': return jsonObject.bodies[1].joints[20].x*xScale;
