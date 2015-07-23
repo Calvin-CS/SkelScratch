@@ -258,8 +258,8 @@
         
     ext.joints = function(k1,l,x)
     {
-        int a;
-        int b;
+        var a;
+        var b;
         switch(k1){
             case 'Left Ankle': a=14;
                 break;
