@@ -175,8 +175,7 @@
             case 'Body 6': i=5;
                 break;
         }
-        return i;
-        //return jsonObject.bodies[i].lhandstate;
+        return jsonObject.bodies[i].lhandstate;
     }
         
        
