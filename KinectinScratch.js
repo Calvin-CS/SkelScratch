@@ -128,11 +128,17 @@
         var i = -1;
         switch(m){
             case 'Body 1': i = 0;
+                break;
             case 'Body 2': i = 1;
+                break;
             case 'Body 3': i = 2;
+                break;
             case 'Body 4': i = 3;
+                break;
             case 'Body 5': i = 4;
+                break;
             case 'Body 6': i = 5;
+                break;
         }
         
         return jsonObject.bodies[i].id != 0;
