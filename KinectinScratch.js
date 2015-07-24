@@ -9,7 +9,6 @@
     var status = 1;
     
     alert("BEFORE CLICKING OK: Make sure you have have followed the instructions in Kinect2Scratch");
-    console.log("Right after the alert");
     
     var wsImpl = window.WebSocket || window.MozWebSocket;
      
