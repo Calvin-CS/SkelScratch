@@ -74,7 +74,7 @@
             ['', 'restart connection', 'restart'],
             ['', 'test block', 'test_block'],
             ['b', 'connected', 'connected'],
-            ['b', 'body tracked', 'tracked'],
+            ['b', '%m.l, tracked', 'tracked'],
             ['', 'console.log %n', 'write'],
             ['', 'bad only %n', 'writeB'],
             ['r', '%m.l id', 'l', 'Body 1'],
@@ -123,15 +123,19 @@
     };
     
     //True if scratch is receiving body data
-    ext.tracked = function()
+    ext.tracked = function(m)
     {
-        if(status == (0 || 1)){
-            return false;
+        var i = -1;
+        switch(m){
+            case 'Body 1': i = 0;
+            case 'Body 2': i = 1;
+            case 'Body 3': i = 2;
+            case 'Body 4': i = 3;
+            case 'Body 5': i = 4;
+            case 'Body 6': i = 5;
         }
         
-        if(status == 2){
-            return true;
-        }
+        return jsonObject.bodies[i].id != 0;
     };
     
     //Outputs numeric content to console
