@@ -16,7 +16,7 @@
     console.log("connecting to server ..");
 
     // create a new websocket and connect
-    window.ws = new wsImpl('ws://localhost:8181/');
+    window.ws = new wsImpl('ws://0.0.0.0:8181/');
 
     // when data is comming from the server, this metod is called
     ws.onmessage = function (evt) {
