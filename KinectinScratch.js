@@ -74,7 +74,7 @@
             ['', 'restart connection', 'restart'],
             ['', 'test block', 'test_block'],
             ['b', 'connected', 'connected'],
-            ['b', '%m.l, tracked', 'tracked'],
+            ['b', '%m.l tracked', 'tracked', 'Body 1'],
             ['', 'console.log %n', 'write'],
             ['', 'bad only %n', 'writeB'],
             ['r', '%m.l id', 'l', 'Body 1'],
