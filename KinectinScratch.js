@@ -67,12 +67,12 @@
     var descriptor = {
         blocks: [
             ['', 'My First Block', 'my_first_block'],
-            ['r', 'n ^ %n', 'power', 2, 3],
+            ['r', '%n ^ %n', 'power', 2, 3],
             ['r', '%m.k body 1 sensor value', 'k', 'Head X'],
             ['r', '%m.k body 2 sensor value', 'k1', 'Head X'],
             ['r', '%m.l %m.k1 %m.x', 'joints', 'Body 1', 'Head', 'x'],
             ['', 'restart local connection', 'restart'],
-            ['', 'Create connection to %s', 'ipconnect'],
+            ['', 'Create connection to %s', 'ipconnect', '0.0.0.0'],
             ['', 'test block', 'test_block'],
             ['b', 'connected', 'connected'],
             ['b', '%m.l tracked', 'tracked', 'Body 1'],
