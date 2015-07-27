@@ -104,6 +104,7 @@
     };
     
     ext.ipconnect = function(s) {
+        window.ws.close();
         console.log("connecting to "+s+' ..');
         window.ws = new wsImpl('ws://'+s+':8181/');
     }
