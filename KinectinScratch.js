@@ -17,7 +17,7 @@
     // create a new websocket and connect
     window.ws = new wsImpl('ws://localhost:8181/');
     
-    // when data is comming from the server, this metod is called
+    // when data is comming from the server, this method is called
     ws.onmessage = function (evt) {
         jsonObject = JSON.parse(evt.data);
             if(jsonObject.bodies == '')
@@ -99,12 +99,12 @@
     
     //restarts the client side of the server
     ext.restart = function() {
-        console.log("connecting to server ..");
-        window.ws = new wsImpl('ws://localhost:8181/');
+        console.log("connecting to local server ..");
+        window.ws = new wsImpl('ws://153.106.117.84:8181/');
     };
     
     ext.ipconnect = function(s) {
-        console.log("connection to "+s);
+        console.log("connecting to "+s+' ..');
         window.ws = new wsImpl('ws://'+s+':8181/');
     }
 	
