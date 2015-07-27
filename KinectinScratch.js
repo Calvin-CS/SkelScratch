@@ -73,6 +73,7 @@
             ['r', '%m.l %m.k1 %m.x', 'joints', 'Body 1', 'Head', 'x'],
             ['', 'restart local connection', 'restart'],
             ['', 'Create connection to %s', 'ipconnect', '0.0.0.0'],
+            ['', 'Close connection', 'closeconn']
             ['', 'test block', 'test_block'],
             ['b', 'connected', 'connected'],
             ['b', '%m.l tracked', 'tracked', 'Body 1'],
@@ -104,9 +105,12 @@
     };
     
     ext.ipconnect = function(s) {
-        window.ws.close();
         console.log("connecting to "+s+' ..');
         window.ws = new wsImpl('ws://'+s+':8181/');
+    }
+    
+    ext.closeconn = function() {
+        window.ws.close();
     }
 	
     ext.power = function(base, exponent) {
