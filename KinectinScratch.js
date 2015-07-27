@@ -100,11 +100,13 @@
     
     //restarts the client side of the server
     ext.restart = function() {
+        window.ws.close();
         console.log("connecting to local server ..");
         window.ws = new wsImpl('ws://localhost:8181/');
     };
     
     ext.ipconnect = function(s) {
+        window.ws.close();
         console.log("connecting to "+s+' ..');
         window.ws = new wsImpl('ws://'+s+':8181/');
     }
