@@ -73,7 +73,7 @@
             ['r', '%m.l %m.k1 %m.x', 'joints', 'Body 1', 'Head', 'x'],
             ['', 'restart local connection', 'restart'],
             ['', 'Create connection to %s', 'ipconnect', '0.0.0.0'],
-            ['', 'Close connection', 'closeconn']
+            ['', 'Close connection', 'closeconn'],
             ['', 'test block', 'test_block'],
             ['b', 'connected', 'connected'],
             ['b', '%m.l tracked', 'tracked', 'Body 1'],
