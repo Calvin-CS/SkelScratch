@@ -103,12 +103,58 @@
         window.ws.close();
         console.log("connecting to local server ..");
         window.ws = new wsImpl('ws://localhost:8181/');
+        
+        // when data is comming from the server, this method is called
+    ws.onmessage = function (evt) {
+        jsonObject = JSON.parse(evt.data);
+            if(jsonObject.bodies == '')
+            {
+                status = 1;
+            } else
+            {
+                status = 2;
+            }
+    };
+
+    // when the connection is established, this method is called
+    ws.onopen = function () {
+        console.log('.. connection open');
+    };
+
+    // when the connection is closed, this method is called
+    ws.onclose = function () {
+        console.log('.. connection closed');
+        status = 0;
+    };
     };
     
     ext.ipconnect = function(s) {
         window.ws.close();
         console.log("connecting to "+s+' ..');
         window.ws = new wsImpl('ws://'+s+':8181/');
+        
+        // when data is comming from the server, this method is called
+    ws.onmessage = function (evt) {
+        jsonObject = JSON.parse(evt.data);
+            if(jsonObject.bodies == '')
+            {
+                status = 1;
+            } else
+            {
+                status = 2;
+            }
+    };
+
+    // when the connection is established, this method is called
+    ws.onopen = function () {
+        console.log('.. connection open');
+    };
+
+    // when the connection is closed, this method is called
+    ws.onclose = function () {
+        console.log('.. connection closed');
+        status = 0;
+    };
     }
     
     ext.closeconn = function() {
