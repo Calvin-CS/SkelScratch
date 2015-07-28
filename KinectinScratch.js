@@ -8,7 +8,7 @@
     var zScale = 200;
     var status = 0;
     
-    alert("BEFORE CLICKING OK: Make sure you have have followed the instructions in Kinect2Scratch");
+    alert("BEFORE CLICKING OK: Make sure the kinect is on and KinectinScratchServer has started");
     
     var wsImpl = window.WebSocket || window.MozWebSocket;
      
