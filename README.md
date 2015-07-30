@@ -1,4 +1,4 @@
-# Kinect-in-Scratch readme
+# SkelScratch readme
 
 ***Install instructions***
 
