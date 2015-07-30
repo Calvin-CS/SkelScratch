@@ -1,11 +1,16 @@
 (function(ext) {
     
+    //The variable that will hold the json to be read from
     var jsonObject = null;
+    //The scale applied to the kinect data to make it map to the canvas better.
     var xScale = 280;
     var yScale = 210;
     var zScale = 200;
+    
+    //The status of the kinect
     var status = 0;
     
+    //alert letting the user know what needs to be done before loading the extension.
     alert("BEFORE CLICKING OK: Make sure the kinect is connected and KinectinScratchServer has started");
     
     var wsImpl = window.WebSocket || window.MozWebSocket;
