@@ -232,7 +232,8 @@
     }
     
     
-    //l: the body whose left handstate we are checking
+    //l: the body whose handstate we are checking
+    //d: which handstate of the body we are checking
     //Outputs the left handstate of the selected body
     ext.handd = function(l,d)
     {
