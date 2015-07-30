@@ -237,7 +237,6 @@
     ext.handd = function(l,d)
     {
         var i;
-        var j;
         switch(l){
             case 'Body 1': i=0;
                 break;
