@@ -78,7 +78,7 @@
             ['', 'console.log %n', 'write'],
             ['', 'bad only %n', 'writeB'],
             ['r', '%m.l id', 'l', 'Body 1'],
-            ['r', '%m.l %m.d Handstate', 'handd', 'Body 1'],
+            ['r', '%m.l %m.d Handstate', 'handd', 'Body 1', 'Left'],
             ['b', '%m.l Left Handstate is %m.n', 'lhand', 'Body 1', 'Closed'],
             ['b', '%m.l Right Handstate is %m.n', 'rhand', 'Body 1', 'Closed']
         ],
