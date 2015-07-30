@@ -388,5 +388,5 @@
     }
         
     // Register the extension
-    ScratchExtensions.register('KinectinScratch', descriptor, ext);
+    ScratchExtensions.register('SkelScratch', descriptor, ext);
 })({});
