@@ -42,4 +42,4 @@ If you downloaded the samples, you can click File -> Load Project and navigate t
 
 ***Troubleshooting***
 
-The server listens on port 8181.
+The client connects to port 8181.
