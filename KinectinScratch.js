@@ -48,8 +48,7 @@
     };
     
 
-    // Status reporting code
-    // Use this to report missing hardware, plugin or unsupported browser
+    // Reports status of kinect
     ext._getStatus = function() {
         if(status == 0)
         {
@@ -93,7 +92,7 @@
     }
     };
     
-    //restarts the client side of the server
+    //restarts the local connection
     ext.restart = function() {
         window.ws.close();
         console.log("connecting to local server ..");
@@ -123,6 +122,8 @@
     };
     };
     
+    //s: a string containing the ip the user wishes to connect to.
+    //Creates a remote connection to s.
     ext.ipconnect = function(s) {
         window.ws.close();
         console.log("connecting to "+s+' ..');
@@ -152,10 +153,14 @@
     };
     }
     
-    ext.closeconn = function() {
+    //Closes the current connection
+    ext.closeconn = function()
+    {
         window.ws.close();
     }
     
+    //Checks the body 1 head x coordinate
+    //Good for check if any data is getting in from the kinect
     ext.basic_body_check = function() {
         console.log(jsonObject.bodies[0].joints[3].x*xScale);
     };
@@ -172,7 +177,8 @@
         }
     };
     
-    //True if scratch is receiving body data
+    //m: the body whose tracking status is to be checked
+    //True if scratch is receiving the chosen body data
     ext.tracked = function(m)
     {
         var i = -1;
@@ -194,11 +200,13 @@
         return jsonObject.bodies[i].id != 0;
     };
     
+    //m: the number to be written to the console
     //Outputs numeric content to console
     ext.write = function(m){
         console.log(m);
     };
     
+    //m: input to be compared to 0
     //Writes "bad" in console if the input is 0
     ext.writeB = function(m){
         if(m == 0)
@@ -207,6 +215,8 @@
         }
     };
     
+    
+    //m: the body whose tracking status is to be checked
     //Gives the id of the selected body
     ext.l = function(m)
     {
@@ -220,6 +230,9 @@
         }
     }
     
+    
+    //l: the body whose left handstate we are checking
+    //Outputs the left handstate of the selected body
     ext.lhandd = function(l)
     {
         var i;
@@ -241,6 +254,8 @@
         return jsonObject.bodies[i].lhandstate;
     }
     
+    //l: The selected body
+    //n: The selected handstate
     //Returns true if the selected bodies left handstate is the same as block selected one.
     ext.lhand = function(l,n)
     {
@@ -278,8 +293,10 @@
         return jsonObject.bodies[i].lhandstate == j;
     }
     
-        //Returns true if the selected bodies right handstate is the same as block selected one.
-        ext.rhand = function(l,n)
+    //l: The selected body
+    //n: The selected handstate
+    //Returns true if the selected bodies right handstate is the same as block selected one.
+    ext.rhand = function(l,n)
     {
         var i;
         var j;
@@ -315,6 +332,10 @@
         return jsonObject.bodies[i].rhandstate == j;
     }
         
+    //l: The body chosen.
+    //k1: The joint chosen.
+    //x: The chosen coordinate.
+    //Gets the coordinate chosen from the joint chosen from the body chosen
     ext.joints = function(l,k1,x)
     {
         var a;
