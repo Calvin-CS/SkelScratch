@@ -78,7 +78,7 @@
             ['', 'console.log %n', 'write'],
             ['', 'bad only %n', 'writeB'],
             ['r', '%m.l id', 'l', 'Body 1'],
-            ['r', '%m.l Left Handstate', 'lhandd', 'Body 1'],
+            ['r', '%m.l %m.d Handstate', 'handd', 'Body 1'],
             ['b', '%m.l Left Handstate is %m.n', 'lhand', 'Body 1', 'Closed'],
             ['b', '%m.l Right Handstate is %m.n', 'rhand', 'Body 1', 'Closed']
         ],
@@ -89,6 +89,7 @@
         l: ['Body 1', 'Body 2', 'Body 3', 'Body 4', 'Body 5', 'Body 6'],
         n: ['Unknown', 'Not Tracked', 'Open', 'Closed', 'Lasso'],
         x: ['x', 'y', 'z'],
+        d: ['Left', 'Right']
     }
     };
     
@@ -233,7 +234,7 @@
     
     //l: the body whose left handstate we are checking
     //Outputs the left handstate of the selected body
-    ext.lhandd = function(l)
+    ext.handd = function(l,d)
     {
         var i;
         var j;
@@ -251,7 +252,12 @@
             case 'Body 6': i=5;
                 break;
         }
-        return jsonObject.bodies[i].lhandstate;
+        
+        switch(d)
+        {
+            case 'Left': return jsonObject.bodies[i].lhandstate;
+            case 'Right': return jsonObject.bodies[i].rhandstate;
+        }
     }
     
     //l: The selected body
