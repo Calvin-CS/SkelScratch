@@ -12,13 +12,10 @@
     
     //alert letting the user know what needs to be done before loading the extension.
     alert("BEFORE CLICKING OK: Make sure the kinect is connected and KinectinScratchServer has started");
-    
-    //var wsImpl = window.WebSocket || window.MozWebSocket;
      
     console.log("connecting to server ..");
 
     // create a new websocket and connect
-    //window.ws = new wsImpl('ws://localhost:8181/');
     window.ws = new WebSocket('ws://localhost:8181/');
     
     // when data is comming from the server, this method is called
@@ -100,7 +97,7 @@
     ext.restart = function() {
         window.ws.close();
         console.log("connecting to local server ..");
-        window.ws = new wsImpl('ws://localhost:8181/');
+        window.ws = new WebSocket('ws://localhost:8181/');
         
         // when data is comming from the server, this method is called
         ws.onmessage = function (evt) {
@@ -129,7 +126,7 @@
     ext.ipconnect = function(s) {
         window.ws.close();
         console.log("connecting to "+s+' ..');
-        window.ws = new wsImpl('ws://'+s+':8181/');
+        window.ws = new WebSocket('ws://'+s+':8181/');
         
         // when data is comming from the server, this method is called
         ws.onmessage = function (evt) {
