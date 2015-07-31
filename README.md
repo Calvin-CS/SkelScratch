@@ -2,7 +2,7 @@
 
 ***Install instructions***
   
-KinectinScratch currently does not support internet explorer.
+SkelScratch currently does not support internet explorer.
 
 Make sure your Kinect is connected in a USB 3.0 port.
 
@@ -16,11 +16,10 @@ Go to https://github.com/visor841/SkelScratch/releases
 
 Go to the downloads section next to "Latest release"
 
-Click on "KinectinScratch.js" and download it. Download "Samples.zip" if you want the sample projects.
+Click on "SkelScratch.js" and download it.
+After downloading the files, go to your downloads and right-click on the ".zip" file downloaded earlier, and click extract all, and then click extract in the bottom right.
 
-After downloading the files, go to your downloads and right-click on the ".zip" file downloaded earlier, and click extract all, and then click extract in the bottom right. Do this for "samples.zip" if you downloaded it.
-
-Next, go into the unzipped (not samples) folder. Open the  folder inside, and then double-click on setup.
+Next, go into the unzipped folder. Open the  folder inside, and then double-click on setup.
 
 A window will come up saying "windows protected your PC". ***Don't click on "OK"*** Click "more info", then click "run anyway".
 
@@ -44,9 +43,7 @@ In the dialog box navigate to your downloads folder and choose SkelScratch.
 
 Click "Ok", "I understand, continue", and "Ok"
 
-If you see a bunch of blocks show up, congratulations, KinectinScratch is now loaded!
-
-If you downloaded the samples, you can click File -> Load Project and navigate to where you unzipped the samples and open one to try things out.
+If you see a bunch of blocks show up, congratulations, SkelScratch is now loaded!
 
 ***Troubleshooting***
 
