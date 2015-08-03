@@ -2,6 +2,7 @@
     
     //The variable that will hold the json to be read from
     var jsonObject = null;
+    
     //The scale applied to the kinect data to make it map to the canvas better.
     var xScale = 280;
     var yScale = 210;
@@ -11,7 +12,7 @@
     var status = 0;
     
     //alert letting the user know what needs to be done before loading the extension.
-    alert("BEFORE CLICKING OK: Make sure the kinect is connected and KinectinScratchServer has started");
+    alert("BEFORE CLICKING OK: Make sure the kinect is connected and your JSON websocket server has started");
      
     console.log("connecting to server ..");
 
@@ -69,17 +70,17 @@
     var descriptor = {
         blocks: [
             ['r', '%m.l %m.k1 %m.x', 'joints', 'Body 1', 'Head', 'x'],
+            ['r', '%m.l %m.d Handstate', 'handd', 'Body 1', 'Left'],
+            ['r', '%m.l id', 'l', 'Body 1'],
+            ['b', '%m.l %m.d Handstate is %m.n', 'hand', 'Body 1', 'Left', 'Closed'],
+            ['b', '%m.l tracked', 'tracked', 'Body 1'],
+            ['b', 'connected', 'connected'],
+            ['', 'Basic body check', 'basic_body_check'],
             ['', 'restart local connection', 'restart'],
             ['', 'Create connection to %s', 'ipconnect', '0.0.0.0'],
             ['', 'Close connection', 'closeconn'],
-            ['', 'Basic body check', 'basic_body_check'],
-            ['b', 'connected', 'connected'],
-            ['b', '%m.l tracked', 'tracked', 'Body 1'],
             ['', 'console.log %n', 'write'],
-            ['', 'bad only %n', 'writeB'],
-            ['r', '%m.l id', 'l', 'Body 1'],
-            ['r', '%m.l %m.d Handstate', 'handd', 'Body 1', 'Left'],
-            ['b', '%m.l %m.d Handstate is %m.n', 'hand', 'Body 1', 'Left', 'Closed']
+            ['', 'bad only %n', 'writeB']
         ],
         
         menus: {
