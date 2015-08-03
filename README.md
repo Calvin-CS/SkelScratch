@@ -1,8 +1,10 @@
 # SkelScratch readme
 
+***Preinstallation notes***
+
+SkelScratch does not support Internet Explorer. Edge has not been tested.
+
 ***Install instructions***
-  
-SkelScratch currently does not support internet explorer.
 
 Make sure your Kinect is connected in a USB 3.0 port.
 
