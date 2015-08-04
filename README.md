@@ -24,7 +24,7 @@ After downloading the files, go to your downloads and right-click on the ".zip" 
 
 Next, go into the unzipped folder. Open the  folder inside, and then double-click on setup.
 
-A window will come up saying "windows protected your PC". ***Don't click on "OK"*** Click "more info", then click "run anyway".
+A window will come up saying "windows protected your PC". ***Don't click on "OK".*** Click "more info", then click "run anyway".
 
 A box will come up saying "Application Install - Security Warning". Click "Install".
 
