@@ -38,7 +38,7 @@ A window will popup about "windows security alert". Check the box next to "publi
 
 The program will now launch.  It might take a minute. Be patient.
 
-Go to www.scratchx.org/#scratch.
+Go to <a href="www.scratchx.org/#scratch" target="_blank">scratchx</a>.
 
 Right-click on "load experimental extension". A file dialog box will pop up.
 
