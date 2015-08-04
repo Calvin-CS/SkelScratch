@@ -2,6 +2,7 @@
 
 ***Preinstallation notes***
 
+SkelScratch requires Windows 8 or newer. Windows 10 has not been tested.  
 SkelScratch does not support Internet Explorer. Edge has not been tested.
 
 ***Installation Instructions***
