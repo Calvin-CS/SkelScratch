@@ -23,7 +23,7 @@ Double-click on setup.
 A window will come up saying "Windows protected your PC". ***Don't click on "OK".*** Click "More info", then click "Run anyway".  
 A box will come up saying "Application Install - Security Warning". Click "Install".  
 A window will come up saying "Windows protected your PC". ***Don't click on "OK"*** Click "More info", then click "Run anyway".  
-A window will popup about "Windows Security Alert". Check the box next to "public networks", then click "allow access".
+A window will popup about "Windows Security Alert". Check the box next to "Public networks", then click "allow access".
 
 The server will now launch.  It might take a minute. Be patient.
 
