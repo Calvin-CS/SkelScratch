@@ -35,6 +35,15 @@ Go to <a href="http://www.scratchx.org/?url=http://visor841.github.io/SkelScratc
 Click "Ok", "I understand, continue", and "Ok".  
 If you see a bunch of blocks show up, congratulations, SkelScratch is now loaded!
 
+Optional: Samples
+
+Go to <a href="https://github.com/visor841/SkelScratch/releases" target="_blank">SkelScratch</a>.  
+Click on "SkelScratch.Samples.zip". Save the file.  
+Go to your downloads folder and right-click on "SkelScratch.Samples.zip", and click "Extract All...", and then click "Extract" in the bottom right.  
+Go back to ScratchX.  
+Click "File" in the top left, then "Load Project".  
+Navigate to where you downloaded the samples, and double-click on the one you want to open.
+
 ***Troubleshooting***
 
 The client connects to port 8181.
