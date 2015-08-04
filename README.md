@@ -8,13 +8,13 @@ SkelScratch does not support Internet Explorer. Edge has not been tested.
 
 Make sure your Kinect is connected in a USB 3.0 port.
 
-Go to https://github.com/visor841/Kinect2JSON/releases
+Go to <a href="https://github.com/visor841/Kinect2JSON/releases" target="_blank">Kinect2JSON</a>.
 
 Go to the downloads section next to "Latest release"
 
 Click on the file ending in ".zip". Save the file.
 
-Go to https://github.com/visor841/SkelScratch/releases
+Go to <a href="https://github.com/visor841/SkelScratch/releases" target="_blank">SkelScratch</a>.
 
 Go to the downloads section next to "Latest release"
 
