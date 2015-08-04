@@ -17,13 +17,13 @@ Part 1: Downloading and installing the server.
 Go to <a href="https://github.com/visor841/Kinect2JSON/releases" target="_blank">Kinect2JSON</a>.  
 Go to the downloads section next to "Latest release".  
 Click on the "Kinect2JSON.zip" link. Save the file.  
-Go to your downloads and right-click on the ".zip" file, and click extract all, and then click extract in the bottom right.  
-Next, go into the unzipped folder. Open the  folder inside, and then double-click on setup.
+Go to your downloads folder and right-click on "Kinect2JSON.zip", and click "Extract All...", and then click "Extract" in the bottom right.  
+Double-click on setup.
 
-A window will come up saying "Windows Protected Your PC". ***Don't click on "OK".*** Click "More Info", then click "Run Anyway".  
+A window will come up saying "Windows protected your PC". ***Don't click on "OK".*** Click "More info", then click "Run anyway".  
 A box will come up saying "Application Install - Security Warning". Click "Install".  
 If you need to launch the program later, go to the start screen, and type in "Kinect2JSON", and hit enter.  
-A window will come up saying "Windows Protected Your PC". ***Don't click on "OK"*** Click "more info", then click "Run Anyway".  
+A window will come up saying "Windows protected your PC". ***Don't click on "OK"*** Click "more info", then click "Run anyway".  
 A window will popup about "Windows Security Alert". Check the box next to "public networks", then click "allow access".
 
 The program will now launch.  It might take a minute. Be patient.
