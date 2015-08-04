@@ -123,10 +123,10 @@
     
     //s: a string containing the ip the user wishes to connect to.
     //Creates a remote connection to s.
-    ext.ipconnect = function(s) {
+    ext.ipconnect = function(string) {
         window.ws.close();
-        console.log("connecting to "+s+' ..');
-        window.ws = new WebSocket('ws://'+s+':8181/');
+        console.log("connecting to "+string+' ..');
+        window.ws = new WebSocket('ws://'+string+':8181/');
         
         // when data is comming from the server, this method is called
         ws.onmessage = function (evt) {
@@ -138,18 +138,18 @@
             {
                 status = 2;
             }
-    };
-
-    // when the connection is established, this method is called
-    ws.onopen = function () {
+        };
+        
+        // when the connection is established, this method is called
+        ws.onopen = function () {
         console.log('.. connection open');
-    };
-
-    // when the connection is closed, this method is called
-    ws.onclose = function () {
+        };
+        
+        // when the connection is closed, this method is called
+        ws.onclose = function () {
         console.log('.. connection closed');
         status = 0;
-    };
+        };
     }
     
     //Closes the current connection
@@ -160,14 +160,14 @@
     
     //m: the number to be written to the console
     //Outputs numeric content to console
-    ext.write = function(m){
-        console.log(m);
+    ext.write = function(number){
+        console.log(number);
     };
     
     //m: input to be compared to 0
     //Writes "bad" in console if the input is 0
-    ext.writeB = function(m){
-        if(m == 0)
+    ext.writeB = function(number){
+        if(number == 0)
         {
             console.log("bad");
         }
@@ -182,9 +182,9 @@
     
     //m: the body chosen (Body 1-6)
     //Gives the id of the selected body
-    ext.bodyid = function(m)
+    ext.bodyid = function(body)
     {
-        switch(m){
+        switch(body){
             case 'Body 1': return jsonObject.bodies[0].id;
             case 'Body 2': return jsonObject.bodies[1].id;
             case 'Body 3': return jsonObject.bodies[2].id;
@@ -208,10 +208,10 @@
     
     //m: the body chosen (Body 1-6)
     //True if scratch is receiving the chosen body data
-    ext.tracked = function(m)
+    ext.tracked = function(body)
     {
         var i = -1;
-        switch(m){
+        switch(body){
             case 'Body 1': i = 0;
                 break;
             case 'Body 2': i = 1;
@@ -233,10 +233,10 @@
     //l: the body chosen (Body 1-6)
     //d: which handstate (left or right)
     //Outputs the left handstate of the selected body
-    ext.handdebug = function(l,d)
+    ext.handdebug = function(body,direction)
     {
         var i;
-        switch(l){
+        switch(body){
             case 'Body 1': i=0;
                 break;
             case 'Body 2': i=1;
@@ -251,7 +251,7 @@
                 break;
         }
         
-        switch(d)
+        switch(direction)
         {
             case 'Left': return jsonObject.bodies[i].lhandstate;
             case 'Right': return jsonObject.bodies[i].rhandstate;
@@ -262,11 +262,11 @@
     //d: Which handstate (left or right)
     //n: The selected handstate (Unknown, Not Tracked, Open, Closed, Lasso)
     //Returns true if the selected bodies left handstate is the same as block selected one.
-    ext.handstate = function(l,d,n)
+    ext.handstate = function(body,direction,handstate)
     {
         var i;
         var j;
-        switch(l){
+        switch(body){
             case 'Body 1': i=0;
                 break;
             case 'Body 2': i=1;
@@ -281,7 +281,7 @@
                 break;
         }
         
-        switch(n)
+        switch(handstate)
         {
             case 'Unknown': j = 0;
                 break;
@@ -295,7 +295,7 @@
                 break;
         }
         
-        switch(d)
+        switch(direction)
         {
             case 'Left': return jsonObject.bodies[i].lhandstate == j;
             case 'Right': return jsonObject.bodies[i].rhandstate == j;
