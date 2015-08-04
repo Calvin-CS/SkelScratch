@@ -1,47 +1,44 @@
-# SkelScratch readme
+# SkelScratch Installation Instructions
 
 ***Preinstallation notes***
 
 SkelScratch does not support Internet Explorer. Edge has not been tested.
 
-***Install instructions***
+***Installation Instructions***
 
-Make sure your Kinect is connected in a USB 3.0 port.
+Plug your Kinect into your PC.  
+Make sure your Kinect is plugged in to a USB 3.0 port.
 
-Go to <a href="https://github.com/visor841/Kinect2JSON/releases" target="_blank">Kinect2JSON</a>.
+SkelScratch exists in two parts: A server that reads from the Kinect, and a client that connects to the server in ScratchX.
 
-Go to the downloads section next to "Latest release"
+Part 1: Downloading and installing the server.
 
-Click on the file ending in ".zip". Save the file.
-
-Go to <a href="https://github.com/visor841/SkelScratch/releases" target="_blank">SkelScratch</a>.
-
-Go to the downloads section next to "Latest release"
-
-Click on "SkelScratch.js" and download it.
-
-After downloading the files, go to your downloads and right-click on the ".zip" file downloaded earlier, and click extract all, and then click extract in the bottom right.
-
+Go to <a href="https://github.com/visor841/Kinect2JSON/releases" target="_blank">Kinect2JSON</a>.  
+Go to the downloads section next to "Latest release".  
+Click on the file ending in ".zip". Save the file.  
+Go to your downloads and right-click on the ".zip" file, and click extract all, and then click extract in the bottom right.  
 Next, go into the unzipped folder. Open the  folder inside, and then double-click on setup.
 
-A window will come up saying "windows protected your PC". ***Don't click on "OK".*** Click "more info", then click "run anyway".
-
-A box will come up saying "Application Install - Security Warning". Click "Install".
-
-A window will come up saying "windows protected your PC". ***Don't click on "OK"*** Click "more info", then click "run anyway".
-
-A window will popup about "windows security alert". Check the box next to "public networks", then click "allow access".
+A window will come up saying "Windows Protected Your PC". ***Don't click on "OK".*** Click "More Info", then click "Run Anyway".  
+A box will come up saying "Application Install - Security Warning". Click "Install".  
+If you need to launch the program later, go to the start screen, and type in "Kinect2JSON", and hit enter.  
+A window will come up saying "Windows Protected Your PC". ***Don't click on "OK"*** Click "more info", then click "Run Anyway".  
+A window will popup about "Windows Security Alert". Check the box next to "public networks", then click "allow access".
 
 The program will now launch.  It might take a minute. Be patient.
 
-Go to <a href="http://www.scratchx.org/#scratch" target="_blank">scratchx</a>.
+Part 2: Downloading the client Scratch extension.
 
-Right-click on "load experimental extension". A file dialog box will pop up.
+Go to <a href="https://github.com/visor841/SkelScratch/releases" target="_blank">SkelScratch</a>.  
+Go to the downloads section next to "Latest release".  
+Click on "SkelScratch.js" and download it.
 
-In the dialog box navigate to your downloads folder and choose SkelScratch.
+Part 3: Launch
 
-Click "Ok", "I understand, continue", and "Ok"
-
+Go to <a href="http://www.scratchx.org/#scratch" target="_blank">scratchx</a>.  
+Right-click on "load experimental extension". A file dialog box will pop up.  
+In the dialog box navigate to your downloads folder and choose SkelScratch.  
+Click "Ok", "I understand, continue", and "Ok".  
 If you see a bunch of blocks show up, congratulations, SkelScratch is now loaded!
 
 ***Troubleshooting***
