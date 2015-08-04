@@ -38,9 +38,7 @@ Click on "SkelScratch.js" and download it.
 
 Part 3: Launch
 
-Go to <a href="http://www.scratchx.org/#scratch" target="_blank">scratchx</a>.  
-Right-click on "load experimental extension". A file dialog box will pop up.  
-In the dialog box navigate to your downloads folder and choose SkelScratch.  
+Go to <a href="http://www.scratchx.org/?url=http://visor841.github.io/SkelScratch/SkelScratch.js#scratch" target="_blank">scratchx</a>.   
 Click "Ok", "I understand, continue", and "Ok".  
 If you see a bunch of blocks show up, congratulations, SkelScratch is now loaded!
 
