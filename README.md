@@ -19,6 +19,7 @@ Go to https://github.com/visor841/SkelScratch/releases
 Go to the downloads section next to "Latest release"
 
 Click on "SkelScratch.js" and download it.
+
 After downloading the files, go to your downloads and right-click on the ".zip" file downloaded earlier, and click extract all, and then click extract in the bottom right.
 
 Next, go into the unzipped folder. Open the  folder inside, and then double-click on setup.
