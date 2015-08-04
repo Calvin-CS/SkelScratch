@@ -28,10 +28,6 @@ A window will come up saying "windows protected your PC". ***Don't click on "OK"
 
 A box will come up saying "Application Install - Security Warning". Click "Install".
 
-Another window will come up saying "windows protected your PC". Click "OK".
-
-Go to the start screen, and type in "kinect2JSON". Hit enter.
-
 A window will come up saying "windows protected your PC". ***Don't click on "OK"*** Click "more info", then click "run anyway".
 
 A window will popup about "windows security alert". Check the box next to "public networks", then click "allow access".
