@@ -3,7 +3,7 @@
 ***Preinstallation notes***
 
 SkelScratch requires Windows 8 or newer. Windows 10 has not been tested.  
-SkelScratch does not support Internet Explorer. Edge has not been tested.
+SkelScratch supports Chrome and Firefox, and does not support Internet Explorer. Other browsers are untested.
 
 ***Installation Instructions***
 
@@ -16,7 +16,7 @@ Part 1: Downloading and installing the server.
 
 Go to <a href="https://github.com/visor841/Kinect2JSON/releases" target="_blank">Kinect2JSON</a>.  
 Go to the downloads section next to "Latest release".  
-Click on the file ending in ".zip". Save the file.  
+Click on the "Kinect2JSON.zip" link. Save the file.  
 Go to your downloads and right-click on the ".zip" file, and click extract all, and then click extract in the bottom right.  
 Next, go into the unzipped folder. Open the  folder inside, and then double-click on setup.
 
