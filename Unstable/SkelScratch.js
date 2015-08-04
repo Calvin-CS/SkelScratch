@@ -69,9 +69,9 @@
     var descriptor = {
         blocks: [
             ['r', '%m.b %m.j %m.c', 'joints', 'Body 1', 'Head', 'x'],
-            ['r', '%m.b %m.d Handstate', 'handd', 'Body 1', 'Left'],
-            ['r', '%m.b id', 'l', 'Body 1'],
-            ['b', '%m.b %m.d Handstate is %m.h', 'hand', 'Body 1', 'Left', 'Closed'],
+            ['r', '%m.b %m.d Handstate', 'handdebug', 'Body 1', 'Left'],
+            ['r', '%m.b id', 'bodyid', 'Body 1'],
+            ['b', '%m.b %m.d Handstate is %m.h', 'handstate', 'Body 1', 'Left', 'Closed'],
             ['b', '%m.b tracked', 'tracked', 'Body 1'],
             ['b', 'connected', 'connected'],
             ['', 'Basic body check', 'basic_body_check'],
@@ -182,7 +182,7 @@
     
     //m: the body chosen (Body 1-6)
     //Gives the id of the selected body
-    ext.l = function(m)
+    ext.bodyid = function(m)
     {
         switch(m){
             case 'Body 1': return jsonObject.bodies[0].id;
@@ -233,7 +233,7 @@
     //l: the body chosen (Body 1-6)
     //d: which handstate (left or right)
     //Outputs the left handstate of the selected body
-    ext.handd = function(l,d)
+    ext.handdebug = function(l,d)
     {
         var i;
         switch(l){
@@ -262,7 +262,7 @@
     //d: Which handstate (left or right)
     //n: The selected handstate (Unknown, Not Tracked, Open, Closed, Lasso)
     //Returns true if the selected bodies left handstate is the same as block selected one.
-    ext.hand = function(l,d,n)
+    ext.handstate = function(l,d,n)
     {
         var i;
         var j;
