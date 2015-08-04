@@ -307,11 +307,12 @@
     //k1: The joint chosen (All joint the kinect v2 tracks).
     //x: The chosen coordinate (x, y, or z).
     //Gets the coordinate chosen from the joint chosen from the body chosen
-    ext.joints = function(l,k1,x)
+    ext.joints = function(body,joint,coordinate)
     {
         var a;
         var b;
-        switch(k1){
+        
+        switch(joint){
             case 'Left Ankle': a=14;
                 break;
             case 'Right Ankle': a=18;
@@ -364,7 +365,7 @@
                 break;
         }
         
-        switch(l){
+        switch(body){
             case 'Body 1': b=0;
                 break;
             case 'Body 2': b=1;
@@ -379,7 +380,7 @@
                 break;
         }
         
-        switch(x){
+        switch(coordinate){
             case 'x': return jsonObject.bodies[b].joints[a].x*xScale;
             case 'y': return jsonObject.bodies[b].joints[a].y*yScale;
             case 'z': return jsonObject.bodies[b].joints[a].z*zScale;
