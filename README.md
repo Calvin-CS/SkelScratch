@@ -29,13 +29,7 @@ The server will now launch.  It might take a minute. Be patient.
 
 (If you need to launch the program later, go to the start screen, and type in "Kinect2JSON", and hit enter.)
 
-Part 2: Downloading the client Scratch extension.
-
-Go to <a href="https://github.com/visor841/SkelScratch/releases" target="_blank">SkelScratch</a>.  
-Go to the downloads section next to "Latest release".  
-Click on "SkelScratch.js" and download it.
-
-Part 3: Launch
+Part 2: Launch
 
 Go to <a href="http://www.scratchx.org/?url=http://visor841.github.io/SkelScratch/SkelScratch.js#scratch" target="_blank">scratchx</a>.   
 Click "Ok", "I understand, continue", and "Ok".  
