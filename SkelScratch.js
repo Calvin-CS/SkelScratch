@@ -10,7 +10,7 @@
     
     //The scale applied to the kinect data to make it map to the canvas better.
     var xScale = 240;
-    var yScale = 210;
+    var yScale = 180;
     var zScale = 200;
     
     //The status of the kinect
