@@ -9,7 +9,7 @@
     var jsonObject = null;
     
     //The scale applied to the kinect data to make it map to the canvas better.
-    var xScale = 280;
+    var xScale = 240;
     var yScale = 210;
     var zScale = 200;
     
