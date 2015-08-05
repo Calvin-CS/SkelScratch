@@ -1,3 +1,8 @@
+/*
+ * Authors: Isaac Zylstra and Victor Norman @ Calvin College, Grand Rapids, MI.
+ * Contact: vtn2@calvin.edu
+ */
+
 (function(ext) {
     
     //The variable that will hold the json to be read from
