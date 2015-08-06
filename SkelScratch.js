@@ -80,8 +80,8 @@
             ['b', '%m.b tracked', 'tracked', 'Body 1'],
             ['b', 'connected', 'connected'],
             ['', 'Basic body check', 'basic_body_check'],
-            ['', 'restart local connection', 'restart'],
-            ['', 'Create connection to %s', 'ipconnect', '0.0.0.0'],
+            ['', 'Restart local connection', 'restart'],
+            ['', 'connect to %s', 'ipconnect', '0.0.0.0'],
             ['', 'Close connection', 'closeconn'],
             ['', 'console.log %n', 'write'],
             ['', 'bad only %n', 'writeB']
