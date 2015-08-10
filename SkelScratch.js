@@ -80,7 +80,7 @@
             ['b', '%m.b tracked', 'tracked', 'Body 1'],
             ['b', 'connected', 'connected'],
             ['', 'Basic body check', 'basic_body_check'], //Comment out of final version.
-            ['', 'Restart local connection', 'restart'],
+            ['', 'Start new local connection', 'local'],
             ['', 'connect to %s', 'ipconnect', '0.0.0.0'],
             ['', 'Close connection', 'closeconn'], //Comment out of final version.
             ['', 'console.log %n', 'write'], //Comment out of final version.
@@ -97,7 +97,7 @@
     };
     
     //restarts the local connection
-    ext.restart = function() {
+    ext.local = function() {
         window.ws.close();
         console.log("connecting to local server ..");
         window.ws = new WebSocket('ws://localhost:8181/');
