@@ -47,6 +47,8 @@ Go back to ScratchX.
 Click "File" in the top left, then "Load Project".  
 Navigate to the extracted folder, open it, open the folder inside, and then you should see a folder named "SkelScratch Samples".Open it, and you should see the samples. Double-click on the one you want to open.
 
+If you want more help, go to the <a href="https://github.com/visor841/SkelScratch/wiki" target="_blank">wiki</a>!
+
 ***Troubleshooting***
 
 The client connects to port 8181.
