@@ -74,17 +74,17 @@
     var descriptor = {
         blocks: [
             ['r', '%m.b %m.j %m.c', 'joints', 'Body 1', 'Head', 'x'],
-            ['r', '%m.b %m.d Handstate', 'handdebug', 'Body 1', 'Left'],
-            ['r', '%m.b id', 'bodyid', 'Body 1'],
             ['b', '%m.b %m.d Handstate is %m.h', 'handstate', 'Body 1', 'Left', 'Closed'],
+            ['r', '%m.b %m.d Handstate', 'handdebug', 'Body 1', 'Left'], //Comment out of final version.
+            ['r', '%m.b id', 'bodyid', 'Body 1'],
             ['b', '%m.b tracked', 'tracked', 'Body 1'],
             ['b', 'connected', 'connected'],
-            ['', 'Basic body check', 'basic_body_check'],
+            ['', 'Basic body check', 'basic_body_check'], //Comment out of final version.
             ['', 'Restart local connection', 'restart'],
             ['', 'connect to %s', 'ipconnect', '0.0.0.0'],
-            ['', 'Close connection', 'closeconn'],
-            ['', 'console.log %n', 'write'],
-            ['', 'bad only %n', 'writeB']
+            ['', 'Close connection', 'closeconn'], //Comment out of final version.
+            ['', 'console.log %n', 'write'], //Comment out of final version.
+            ['', 'bad only %n', 'writeB'] //Comment out of final version.
         ],
         
         menus: {
