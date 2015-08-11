@@ -74,7 +74,7 @@
     var descriptor = {
         blocks: [
             ['r', '%m.b %m.j %m.c', 'joints', 'Body 1', 'Head', 'x'],
-            ['r', '%n %m.j %m.c', 'jointsID', '0', 'Head', 'x'],
+            ['r', 'Body ID %n %m.j %m.c', 'jointsID', '0', 'Head', 'x'],
             ['b', '%m.b %m.d Handstate is %m.h', 'handstate', 'Body 1', 'Left', 'Closed'],
             ['r', '%m.b %m.d Handstate', 'handdebug', 'Body 1', 'Left'], //Comment out of final version.
             ['r', '%m.b id', 'bodyid', 'Body 1'],
