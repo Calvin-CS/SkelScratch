@@ -197,7 +197,7 @@
         //    }
         }
         //console.log(jsonObject.bodies[b].joints[3].x*xScale);
-        console.log(0);
+        console.log(b);
     }
     
     
