@@ -74,9 +74,7 @@
     var descriptor = {
         blocks: [
             ['r', '%m.b %m.j %m.c', 'joints', 'Body 1', 'Head', 'x'],
-            ['r', 'Body ID %n %m.j %m.c', 'jointsID', '0', 'Head', 'x'],
             ['b', '%m.b %m.d Handstate is %m.h', 'handstate', 'Body 1', 'Left', 'Closed'],
-            ['b', 'Body ID %n %m.d Handstate is %m.h', 'handstateID', '0', 'Left', 'Closed'],
             ['r', '%m.b %m.d Handstate', 'handdebug', 'Body 1', 'Left'], //Comment out of final version.
             ['r', '%m.b id', 'bodyid', 'Body 1'],
             ['b', '%m.b tracked', 'tracked', 'Body 1'],
@@ -187,20 +185,6 @@
     };
     
     
-    //m: the body chosen (Body 1-6)
-    //Gives the id of the selected body
-    ext.bodyid = function(body)
-    {
-        switch(body){
-            case 'Body 1': return jsonObject.bodies[0].id;
-            case 'Body 2': return jsonObject.bodies[1].id;
-            case 'Body 3': return jsonObject.bodies[2].id;
-            case 'Body 4': return jsonObject.bodies[3].id;
-            case 'Body 5': return jsonObject.bodies[4].id;
-            case 'Body 6': return jsonObject.bodies[5].id;
-        }
-    }
-    
         //True if scratch is receiving the kinect (but not necessarily data)
     ext.connected = function()
     {
@@ -309,46 +293,6 @@
         }
     }
     
-    //l: The selected body (Body 1-6)
-    //d: Which handstate (left or right)
-    //n: The selected handstate (Unknown, Not Tracked, Open, Closed, Lasso)
-    //Returns true if the selected bodies left handstate is the same as block selected one.
-        ext.handstateID = function(bodyID,direction,handstate)
-    {
-        var k;
-        var j;
-            
-                    switch(handstate)
-        {
-            case 'Unknown': k = 0;
-                break;
-            case 'Not Tracked': k = 1;
-                break;
-            case 'Open': k = 2;
-                break;
-            case 'Closed': k = 3;
-                break;
-            case 'Lasso': k = 4;
-                break;
-        }
-            
-        for(i = 0; i < 6; i++)
-        {
-            if(bodyID == jsonObject.bodies[i].id)
-            {
-                j = i;
-            }
-        }
-    
-        
-        switch(direction)
-        {
-            case 'Left': return jsonObject.bodies[j].lhandstate == k;
-            case 'Right': return jsonObject.bodies[j].rhandstate == k;
-        }
-    }
-
-    
         
     //l: The body chosen (Body 1-6).
     //k1: The joint chosen (All joint the kinect v2 tracks).
@@ -425,83 +369,6 @@
                 break;
             case 'Body 6': b=5;
                 break;
-        }
-        
-        switch(coordinate){
-            case 'x': return jsonObject.bodies[b].joints[a].x*xScale;
-            case 'y': return jsonObject.bodies[b].joints[a].y*yScale;
-            case 'z': return jsonObject.bodies[b].joints[a].z*zScale;
-        }
-    }
-            
-    //bodyID: The body chosen (Body 1-6).
-    //k1: The joint chosen (All joint the kinect v2 tracks).
-    //x: The chosen coordinate (x, y, or z).
-    //Gets the coordinate chosen from the joint chosen from the body chosen
-    ext.jointsID = function(bodyID,joint,coordinate)
-    {
-        var a = -1;
-        var b = -1;
-        
-        switch(joint){
-            case 'Left Ankle': a=14;
-                break;
-            case 'Right Ankle': a=18;
-                break;
-            case 'Left Elbow': a=5;
-                break;
-            case 'Right Elbow': a=9;
-                break;
-            case 'Left Foot': a=15;
-                break;
-            case 'Right Foot': a=19;
-                break;
-            case 'Left Hand': a=7;
-                break;
-            case 'Right Hand': a=11;
-                break;
-            case 'Left Hand Tip': a=21;
-                break;
-            case 'Right Hand Tip': a=23;
-                break;
-            case 'Head': a=3;
-                break;
-            case 'Left Hip': a=12;
-                break;
-            case 'Right Hip': a=16;
-                break;
-            case 'Left Knee': a=13;
-                break;
-            case 'Right Knee': a=17;
-                break;
-            case 'Neck': a=2;
-                break;
-            case 'Left Shoulder': a=4;
-                break;
-            case 'Right Shoulder': a=8;
-                break;
-            case 'Spine Base': a=0;
-                break;
-            case 'Spine Middle': a=1;
-                break;
-            case 'Spine Shoulder': a=20;
-                break;
-            case 'Left Thumb': a=22;
-                break;
-            case 'Right Thumb': a=24;
-                break;
-            case 'Left Wrist': a=6;
-                break;
-            case 'Right Wrist': a=10;
-                break;
-        }
-        
-        for(i = 0; i < 6; i++)
-        {
-            if(bodyID == jsonObject.bodies[i].id)
-            {
-                b = i;
-            }
         }
         
         switch(coordinate){
