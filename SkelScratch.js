@@ -196,7 +196,8 @@
             b = i;
             }
         }
-        console.log(jsonObject.bodies[0].joints[3].x*xScale);
+        //console.log(jsonObject.bodies[b].joints[3].x*xScale);
+        console.log(0);
     }
     
     
