@@ -211,7 +211,7 @@
             //b = jsonObject.bodies[5].id;
         //    }
         }
-        console.log(jsonObject.bodies[b].joints[3].x*xScale);
+        console.log(jsonObject.bodies[0].joints[3].x*xScale);
         //console.log(b);
     }
     
