@@ -455,7 +455,8 @@
                 break;
         }
         
-        for(int i = 0; i < 6; i++){
+        for(i = 0; i < 6; i++)
+        {
             if(bodyID == jsonObject.bodies[i].id)
             {
                 b = i;
