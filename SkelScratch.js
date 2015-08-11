@@ -185,6 +185,20 @@
         console.log(jsonObject.bodies[0].joints[3].x*xScale);
     };
     
+    //m: the body chosen (Body 1-6)
+    //Gives the id of the selected body
+    ext.bodyid = function(body)
+    {
+        switch(body){
+            case 'Body 1': return jsonObject.bodies[0].id;
+            case 'Body 2': return jsonObject.bodies[1].id;
+            case 'Body 3': return jsonObject.bodies[2].id;
+            case 'Body 4': return jsonObject.bodies[3].id;
+            case 'Body 5': return jsonObject.bodies[4].id;
+            case 'Body 6': return jsonObject.bodies[5].id;
+        }
+    }
+    
     ext.test = function()
     {
         var b = -1;
