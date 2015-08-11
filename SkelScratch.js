@@ -187,7 +187,7 @@
     
     ext.test = function()
     {
-        //var b = -1;
+        var b = -1;
         //var bodyID = jsonObject.bodies[0].id
         //for(i = 0; i < 6; i++)
         //{
