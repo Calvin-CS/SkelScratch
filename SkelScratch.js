@@ -189,15 +189,15 @@
     {
         var b = -1;
         var bodyID = jsonObject.bodies[0].id;
-        //for(i = 0; i < 6; i++)
-        //{
-        //if(bodyID == jsonObject.bodies[i].id)
-        //    {
-        //    b = i;
-        //    }
-        //}
-        //console.log(jsonObject.bodies[b].joints[3].x*xScale);
-        console.log(0);
+        for(i = 0; i < 6; i++)
+        {
+        if(bodyID == jsonObject.bodies[i].id)
+            {
+            b = i;
+            }
+        }
+        console.log(jsonObject.bodies[b].joints[3].x*xScale);
+        //console.log(0);
     }
     
     
