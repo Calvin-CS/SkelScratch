@@ -77,7 +77,7 @@
             ['r', 'Body ID %n %m.j %m.c', 'jointsID', '0', 'Head', 'x'],
             ['b', '%m.b %m.d Handstate is %m.h', 'handstate', 'Body 1', 'Left', 'Closed'],
             ['r', '%m.b %m.d Handstate', 'handdebug', 'Body 1', 'Left'], //Comment out of final version.
-            ['r', '%m.b id', 'bodyid', 'Body 1'],
+            ['r', '%m.b ID', 'bodyid', 'Body 1'],
             ['b', '%m.b tracked', 'tracked', 'Body 1'],
             ['b', 'connected', 'connected'],
             ['', 'Basic body check', 'basic_body_check'], //Comment out of final version.
