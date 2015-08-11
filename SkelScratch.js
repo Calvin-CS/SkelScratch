@@ -80,6 +80,7 @@
             ['b', '%m.b tracked', 'tracked', 'Body 1'],
             ['b', 'connected', 'connected'],
             ['', 'Basic body check', 'basic_body_check'], //Comment out of final version.
+            ['', 'Test Block', 'test'], //Comment out of final
             ['', 'Start new local connection', 'local'],
             ['', 'connect to %s', 'ipconnect', '0.0.0.0'],
             ['', 'Close connection', 'closeconn'], //Comment out of final version.
@@ -183,6 +184,20 @@
     ext.basic_body_check = function() {
         console.log(jsonObject.bodies[0].joints[3].x*xScale);
     };
+    
+    ext.test = function()
+    {
+        var b = -1;
+        var bodyID = jsonObject.bodies[0].id
+        for(i = 0; i < 6; i++)
+        {
+        if(bodyID == jsonObject.bodies[i].id)
+            {
+            b = i;
+            }
+        }
+        console.log(jsonObject.bodies[b].joints[3].x*xScale);
+    }
     
     
         //True if scratch is receiving the kinect (but not necessarily data)
