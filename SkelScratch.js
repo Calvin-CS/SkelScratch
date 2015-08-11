@@ -205,11 +205,15 @@
         var bodyID = jsonObject.bodies[0].id;
         for(i = 0; i < 6; i++)
         {
-        //if(bodyID == jsonObject.bodies[i].id)
-        //    {
-            //b = i;
-            //b = jsonObject.bodies[5].id;
-        //    }
+            if(bodyID != 0)
+            {
+                if(bodyID == jsonObject.bodies[i].id)
+                {
+                    b = i;
+                    //b = jsonObject.bodies[5].id;
+                }
+            }
+
         }
         console.log(jsonObject.bodies[0].joints[3].x*xScale);
         //console.log(b);
