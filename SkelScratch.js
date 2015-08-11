@@ -207,8 +207,8 @@
         {
         //if(bodyID == jsonObject.bodies[i].id)
         //    {
-            b = i;
-            //b = jsonObject.bodies[i].id;
+            //b = i;
+            b = jsonObject.bodies[0].id;
         //    }
         }
         //console.log(jsonObject.bodies[b].joints[3].x*xScale);
