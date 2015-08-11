@@ -215,7 +215,7 @@
             }
 
         }
-        console.log(jsonObject.bodies[0].joints[3].x*xScale);
+        console.log(jsonObject.bodies[b].id);
         //console.log(b);
     }
     
