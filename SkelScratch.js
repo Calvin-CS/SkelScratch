@@ -437,7 +437,7 @@
     //bodyID: The ID of the body information is wanted from.
     //joint: The joint chosen (All joints the Kinect v2 tracks).
     //coordinate: The chosen coordinate (x, y, or z).
-    //Gets the coordinate chosen from the joint chosen from the body chosen
+    //Gets the coordinate chosen from the joint chosen from the body chosen.
     ext.jointsID = function(bodyID,joint,coordinate)
     {
         var a = -1;
@@ -498,7 +498,6 @@
         
         for(i = 0; i < jsonObject.bodies.length; i++)
         {
-            console.log(jsonObject.bodies);
             if(bodyID != 0)
             {
                 if(bodyID == jsonObject.bodies[i].id)
