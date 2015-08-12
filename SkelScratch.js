@@ -440,7 +440,6 @@
     //Gets the coordinate chosen from the joint chosen from the body chosen
     ext.jointsID = function(bodyID,joint,coordinate)
     {
-        console.log(bodyID);
         var a = -1;
         var b = -1;
         
@@ -501,6 +500,7 @@
         
         for(i = 0; i < 6; i++)
         {
+            console.log(bodyID);
             if(bodyID != 0)
             {
                 if(bodyID == jsonObject.bodies[i].id)
