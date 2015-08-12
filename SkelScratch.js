@@ -496,8 +496,6 @@
                 break;
         }
         
-        console.log(bodyID);
-        
         for(i = 0; i < jsonObject.bodies.length; i++)
         {
             console.log(jsonObject.bodies);
