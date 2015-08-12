@@ -500,7 +500,7 @@
         
         for(i = 0; i < 6; i++)
         {
-            console.log(bodyID);
+            console.log(jsonObject.bodies);
             if(bodyID != 0)
             {
                 if(bodyID == jsonObject.bodies[i].id)
