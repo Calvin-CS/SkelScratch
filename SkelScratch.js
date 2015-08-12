@@ -498,7 +498,7 @@
         
         console.log(bodyID);
         
-        for(i = 0; i < 6; i++)
+        for(i = 0; i < jsonObject.bodies.length; i++)
         {
             console.log(jsonObject.bodies);
             if(bodyID != 0)
