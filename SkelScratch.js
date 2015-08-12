@@ -5,26 +5,28 @@
 
 (function(ext) {
     
-    //The variable that will hold the json to be read from
+    //The variable that will hold the JSON to be read from
     var jsonObject = null;
     
-    //The scale applied to the kinect data to make it map to the canvas better.
+    //The scale applied to the Kinect data to make it map to the canvas better.
     var xScale = 240;
     var yScale = 180;
     var zScale = 200;
     
-    //The status of the kinect
+    //The status of the Kinect
     var status = 0;
     
     //alert letting the user know what needs to be done before loading the extension.
-    alert("BEFORE CLICKING OK: Make sure the kinect is connected and your JSON websocket server has started");
+    alert("BEFORE CLICKING OK: Make sure the Kinect is connected and your JSON websocket server has started");
      
     console.log("connecting to server ..");
 
     // create a new websocket and connect
     window.ws = new WebSocket('ws://localhost:8181/');
     
-    // when data is comming from the server, this method is called
+    // when data is comming from the server,
+    // this method parses the data into JSON,
+    // and sets the status of the extension
     ws.onmessage = function (evt) {
         jsonObject = JSON.parse(evt.data);
             if(jsonObject.bodies == '')
@@ -36,12 +38,14 @@
             }
     };
 
-    // when the connection is established, this method is called
+    // when the connection is established,
+    // this method writes that information to the console
     ws.onopen = function () {
         console.log('.. connection open');
     };
 
-    // when the connection is closed, this method is called
+    // when the connection is closed,
+    // this method writes that information to the console
     ws.onclose = function () {
         console.log('.. connection closed');
         status = 0;
@@ -54,7 +58,7 @@
     };
     
 
-    // Reports status of kinect
+    // Reports the status of the Kinect
     ext._getStatus = function() {
         if(status == 0)
         {
@@ -90,21 +94,29 @@
         ],
         
         menus: {
+            //All of the joints
 	    j: ['Left Ankle', 'Right Ankle', 'Left Elbow', 'Right Elbow', 'Left Foot', 'Right Foot', 'Left Hand', 'Right Hand', 'Left Hand Tip', 'Right Hand Tip', 'Head', 'Left Hip', 'Right Hip', 'Left Knee', 'Right Knee', 'Neck', 'Left Shoulder', 'Right Shoulder', 'Spine Base', 'Spine Middle', 'Spine Shoulder', 'Left Thumb', 'Right Thumb', 'Left Wrist', 'Right Wrist'],
+            //The six bodies
         b: ['Body 1', 'Body 2', 'Body 3', 'Body 4', 'Body 5', 'Body 6'],
+            //The five handstate states
         h: ['Unknown', 'Not Tracked', 'Open', 'Closed', 'Lasso'],
+            //The three coordinates
         c: ['x', 'y', 'z'],
+            //Direction
         d: ['Left', 'Right']
     }
     };
     
-    //restarts the local connection
-    ext.local = function() {
+    //Starts a new local connection
+    ext.local = function()
+    {
         window.ws.close();
         console.log("connecting to local server ..");
         window.ws = new WebSocket('ws://localhost:8181/');
         
-        // when data is comming from the server, this method is called
+        // when data is comming from the server,
+        // this method parses the data into JSON,
+        // and sets the status of the extension
         ws.onmessage = function (evt) {
             jsonObject = JSON.parse(evt.data);
             if(jsonObject.bodies == '')
@@ -114,28 +126,32 @@
             {
                 status = 2;
             }
-    };
+        };
 
-    // when the connection is established, this method is called
-    ws.onopen = function () {
-        console.log('.. connection open');
-    };
+        // when the connection is established,
+        // this method writes that information to the console
+        ws.onopen = function () {
+            console.log('.. connection open');
+        };
 
-    // when the connection is closed, this method is called
-    ws.onclose = function () {
-        console.log('.. connection closed');
-        status = 0;
-    };
+        // when the connection is closed,
+        // this method writes that information to the console
+        ws.onclose = function () {
+            console.log('.. connection closed');
+            status = 0;
+        };
     };
     
-    //s: a string containing the ip the user wishes to connect to.
+    //string: a string containing the ip the user wishes to connect to.
     //Creates a remote connection to s.
     ext.ipconnect = function(string) {
         window.ws.close();
         console.log("connecting to "+string+' ..');
         window.ws = new WebSocket('ws://'+string+':8181/');
         
-        // when data is comming from the server, this method is called
+        // when data is comming from the server,
+        // this method parses the data into JSON,
+        // and sets the status of the extension
         ws.onmessage = function (evt) {
             jsonObject = JSON.parse(evt.data);
             if(jsonObject.bodies == '')
@@ -147,15 +163,17 @@
             }
         };
         
-        // when the connection is established, this method is called
+        // when the connection is established,
+        // this method writes that information to the console
         ws.onopen = function () {
-        console.log('.. connection open');
+            console.log('.. connection open');
         };
         
-        // when the connection is closed, this method is called
+        // when the connection is closed,
+        // this method writes that information to the console
         ws.onclose = function () {
-        console.log('.. connection closed');
-        status = 0;
+            console.log('.. connection closed');
+            status = 0;
         };
     }
     
@@ -165,13 +183,13 @@
         window.ws.close();
     }
     
-    //m: the number to be written to the console
+    //number: the number to be written to the console
     //Outputs numeric content to console
     ext.write = function(number){
         console.log(number);
     };
     
-    //m: input to be compared to 0
+    //number: input to be compared to 0
     //Writes "bad" in console if the input is 0
     ext.writeB = function(number){
         if(number == 0)
@@ -181,12 +199,12 @@
     };
     
     //Checks the body 1 head x coordinate
-    //Good for check if any data is getting in from the kinect
+    //Good for check if any data is getting in from the Kinect
     ext.basic_body_check = function() {
         console.log(jsonObject.bodies[0].joints[3].x*xScale);
     };
     
-    //m: the body chosen (Body 1-6)
+    //number: the body chosen (Body 1-6)
     //Gives the id of the selected body
     ext.bodyid = function(body)
     {
@@ -200,6 +218,8 @@
         }
     }
     
+    //Checks to see if getting the ID of a body, finding the body with that ID,
+    //and getting that ID returns the original ID (it should).
     ext.test = function()
     {
         var b = -1;
@@ -221,7 +241,7 @@
     }
     
     
-        //True if scratch is receiving the kinect (but not necessarily data)
+    //True if scratch is receiving the Kinect (but not necessarily data)
     ext.connected = function()
     {
         if(status == 0){
@@ -233,7 +253,7 @@
         }
     };
     
-    //m: the body chosen (Body 1-6)
+    //body: the body chosen (Body 1-6)
     //True if scratch is receiving the chosen body data
     ext.tracked = function(body)
     {
@@ -257,8 +277,8 @@
     };
     
     
-    //l: the body chosen (Body 1-6)
-    //d: which handstate (left or right)
+    //body: the body chosen (Body 1-6)
+    //direction: which handstate (left or right)
     //Outputs the left handstate of the selected body
     ext.handdebug = function(body,direction)
     {
@@ -285,9 +305,9 @@
         }
     }
     
-    //l: The selected body (Body 1-6)
-    //d: Which handstate (left or right)
-    //n: The selected handstate (Unknown, Not Tracked, Open, Closed, Lasso)
+    //body: The selected body (Body 1-6)
+    //direction: Which handstate (left or right)
+    //handstate: The selected handstate (Unknown, Not Tracked, Open, Closed, Lasso)
     //Returns true if the selected bodies left handstate is the same as block selected one.
     ext.handstate = function(body,direction,handstate)
     {
@@ -330,9 +350,9 @@
     }
     
         
-    //l: The body chosen (Body 1-6).
-    //k1: The joint chosen (All joint the kinect v2 tracks).
-    //x: The chosen coordinate (x, y, or z).
+    //body: The body chosen (Body 1-6).
+    //joint: The joint chosen (All joint the Kinect v2 tracks).
+    //coordinate: The chosen coordinate (x, y, or z).
     //Gets the coordinate chosen from the joint chosen from the body chosen
     ext.joints = function(body,joint,coordinate)
     {
@@ -414,9 +434,9 @@
         }
     }
     
-        //l: The body chosen (Body 1-6).
-    //k1: The joint chosen (All joint the kinect v2 tracks).
-    //x: The chosen coordinate (x, y, or z).
+    //bodyID: The ID of the body information is wanted from.
+    //joint: The joint chosen (All joints the Kinect v2 tracks).
+    //coordinate: The chosen coordinate (x, y, or z).
     //Gets the coordinate chosen from the joint chosen from the body chosen
     ext.jointsID = function(bodyID,joint,coordinate)
     {
