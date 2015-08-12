@@ -440,6 +440,7 @@
     //Gets the coordinate chosen from the joint chosen from the body chosen
     ext.jointsID = function(bodyID,joint,coordinate)
     {
+                console.log(bodyID);
         var a = -1;
         var b = -1;
         
@@ -506,7 +507,6 @@
                 }
             }
         }
-        console.log(bodyID);
         
         switch(coordinate){
             case 'x': return jsonObject.bodies[b].joints[a].x*xScale;
