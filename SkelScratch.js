@@ -497,6 +497,8 @@
                 break;
         }
         
+        console.log(bodyID);
+        
         for(i = 0; i < 6; i++)
         {
             if(bodyID != 0)
