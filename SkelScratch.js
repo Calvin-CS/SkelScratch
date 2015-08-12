@@ -80,6 +80,7 @@
             ['r', '%m.b %m.j %m.c', 'joints', 'Body 1', 'Head', 'x'],
             ['r', 'Body ID %n %m.j %m.c', 'jointsID', '0', 'Head', 'x'],
             ['b', '%m.b %m.d Handstate is %m.h', 'handstate', 'Body 1', 'Left', 'Closed'],
+            ['b', 'Body ID %n %m.d Handstate is %m.h', 'handstateID', '0', 'Left', 'Closed'],
             ['r', '%m.b %m.d Handstate', 'handdebug', 'Body 1', 'Left'], //Comment out of final version.
             ['r', '%m.b ID', 'bodyid', 'Body 1'],
             ['b', '%m.b tracked', 'tracked', 'Body 1'],
@@ -257,25 +258,24 @@
     //True if scratch is receiving the chosen body data
     ext.tracked = function(body)
     {
-        var i = -1;
+        var b = -1;
         switch(body){
-            case 'Body 1': i = 0;
+            case 'Body 1': b = 0;
                 break;
-            case 'Body 2': i = 1;
+            case 'Body 2': b = 1;
                 break;
-            case 'Body 3': i = 2;
+            case 'Body 3': b = 2;
                 break;
-            case 'Body 4': i = 3;
+            case 'Body 4': b = 3;
                 break;
-            case 'Body 5': i = 4;
+            case 'Body 5': b = 4;
                 break;
-            case 'Body 6': i = 5;
+            case 'Body 6': b = 5;
                 break;
         }
         
-        return jsonObject.bodies[i].id != 0;
+        return jsonObject.bodies[b].id != 0;
     };
-    
     
     //body: the body chosen (Body 1-6)
     //direction: which handstate (left or right)
@@ -311,41 +311,84 @@
     //Returns true if the selected bodies left handstate is the same as block selected one.
     ext.handstate = function(body,direction,handstate)
     {
-        var i;
-        var j;
-        switch(body){
-            case 'Body 1': i=0;
-                break;
-            case 'Body 2': i=1;
-                break;
-            case 'Body 3': i=2;
-                break;
-            case 'Body 4': i=3;
-                break;
-            case 'Body 5': i=4;
-                break;
-            case 'Body 6': i=5;
-                break;
-        }
+        var a;
+        var b;
         
         switch(handstate)
         {
-            case 'Unknown': j = 0;
+            case 'Unknown': a = 0;
                 break;
-            case 'Not Tracked': j = 1;
+            case 'Not Tracked': a = 1;
                 break;
-            case 'Open': j = 2;
+            case 'Open': a = 2;
                 break;
-            case 'Closed': j = 3;
+            case 'Closed': a = 3;
                 break;
-            case 'Lasso': j = 4;
+            case 'Lasso': a = 4;
+                break;
+        }
+        
+        switch(body){
+            case 'Body 1': b=0;
+                break;
+            case 'Body 2': b=1;
+                break;
+            case 'Body 3': b=2;
+                break;
+            case 'Body 4': b=3;
+                break;
+            case 'Body 5': b=4;
+                break;
+            case 'Body 6': b=5;
                 break;
         }
         
         switch(direction)
         {
-            case 'Left': return jsonObject.bodies[i].lhandstate == j;
-            case 'Right': return jsonObject.bodies[i].rhandstate == j;
+            case 'Left': return jsonObject.bodies[b].lhandstate == a;
+            case 'Right': return jsonObject.bodies[b].rhandstate == a;
+        }
+    }
+    
+        
+    //bodyID: The ID of the body information is wanted from.
+    //direction: Which handstate (left or right)
+    //handstate: The selected handstate (Unknown, Not Tracked, Open, Closed, Lasso)
+    //Returns true if the selected bodies left handstate is the same as block selected one.
+    ext.handstateID = function(bodyID,direction,handstate)
+    {
+        var a;
+        var b;
+        
+        switch(handstate)
+        {
+            case 'Unknown': a = 0;
+                break;
+            case 'Not Tracked': a = 1;
+                break;
+            case 'Open': a = 2;
+                break;
+            case 'Closed': a = 3;
+                break;
+            case 'Lasso': a = 4;
+                break;
+        }
+        
+        for(i = 0; i < jsonObject.bodies.length; i++)
+        {
+            if(bodyID != 0)
+            {
+                if(bodyID == jsonObject.bodies[i].id)
+                {
+                    b = i;
+                }
+            }
+        }
+        
+        switch(direction)
+        {
+            case 'Left': return jsonObject.bodies[b].lhandstate == a;
+            case 'Right': return jsonObject.bodies[b].rhandstate == a;
         }
     }
     
