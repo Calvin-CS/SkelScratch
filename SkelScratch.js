@@ -506,6 +506,7 @@
                 }
             }
         }
+        console.log(bodyID);
         
         switch(coordinate){
             case 'x': return jsonObject.bodies[b].joints[a].x*xScale;
