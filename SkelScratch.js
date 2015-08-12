@@ -440,7 +440,7 @@
     //Gets the coordinate chosen from the joint chosen from the body chosen
     ext.jointsID = function(bodyID,joint,coordinate)
     {
-                console.log(bodyID);
+        console.log(bodyID);
         var a = -1;
         var b = -1;
         
