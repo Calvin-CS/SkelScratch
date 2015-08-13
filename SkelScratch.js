@@ -289,11 +289,11 @@
             {
                 if(bodyID == jsonObject.bodies[i].id)
                 {
-                    b = i;
+                    b = 0;
                 }
             }
         }
-        return b == -1;
+        return b == 0;
     };
     
     //body: the body chosen (Body 1-6)
