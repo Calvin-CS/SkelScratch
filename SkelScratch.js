@@ -277,6 +277,24 @@
         return jsonObject.bodies[b].id != 0;
     };
     
+    //bodyID: The ID of the body information is wanted from.
+    //True if scratch is receiving the chosen body data
+    ext.trackedID = function(bodyID)
+    {
+        var b = -1;
+        for(i = 0; i < jsonObject.bodies.length; i++)
+        {
+            if(bodyID != 0)
+            {
+                if(bodyID == jsonObject.bodies[i].id)
+                {
+                    b = i;
+                }
+            }
+        }
+        return b == -1;
+    };
+    
     //body: the body chosen (Body 1-6)
     //direction: which handstate (left or right)
     //Outputs the left handstate of the selected body
