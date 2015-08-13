@@ -84,6 +84,7 @@
             ['r', '%m.b %m.d Handstate', 'handdebug', 'Body 1', 'Left'], //Comment out of final version.
             ['r', '%m.b ID', 'bodyid', 'Body 1'],
             ['b', '%m.b tracked', 'tracked', 'Body 1'],
+            ['b', 'Body ID %n tracked', 'trackedID', '0'],
             ['b', 'connected', 'connected'],
             ['', 'Basic body check', 'basic_body_check'], //Comment out of final version.
             ['', 'Test Block', 'test'], //Comment out of final
