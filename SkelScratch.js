@@ -78,21 +78,21 @@
     var descriptor = {
         blocks: [
             ['r', '%m.b %m.j %m.c', 'joints', 'Body 1', 'Head', 'x'],
-            ['r', 'Body ID %n %m.j %m.c', 'jointsID', '0', 'Head', 'x'],
             ['b', '%m.b %m.d Handstate is %m.h', 'handstate', 'Body 1', 'Left', 'Closed'],
-            ['b', 'Body ID %n %m.d Handstate is %m.h', 'handstateID', '0', 'Left', 'Closed'],
-            ['r', '%m.b %m.d Handstate', 'handdebug', 'Body 1', 'Left'], //Comment out of final version.
-            ['r', '%m.b ID', 'bodyid', 'Body 1'],
-            ['b', '%m.b tracked', 'tracked', 'Body 1'],
-            ['b', 'Body ID %n tracked', 'trackedID', '0'],
-            ['b', 'connected', 'connected'],
-            ['', 'Basic body check', 'basic_body_check'], //Comment out of final version.
-            ['', 'Test Block', 'test'], //Comment out of final
-            ['', 'Start new local connection', 'local'],
             ['', 'connect to %s', 'ipconnect', '0.0.0.0'],
-            ['', 'Close connection', 'closeconn'], //Comment out of final version.
-            ['', 'console.log %n', 'write'], //Comment out of final version.
-            ['', 'bad only %n', 'writeB'] //Comment out of final version.
+            ['', 'Start new local connection', 'local'],
+            ['b', 'connected', 'connected'],
+            ['b', '%m.b tracked', 'tracked', 'Body 1'],
+            ['r', '%m.b ID', 'bodyid', 'Body 1'],
+            ['r', 'Body ID %n %m.j %m.c', 'jointsID', '0', 'Head', 'x'],
+            ['b', 'Body ID %n %m.d Handstate is %m.h', 'handstateID', '0', 'Left', 'Closed'],
+            ['b', 'Body ID %n tracked', 'trackedID', '0'],
+            //['r', '%m.b %m.d Handstate', 'handdebug', 'Body 1', 'Left'],
+            //['', 'Basic body check', 'basic_body_check'],
+            //['', 'Test Block', 'test'],
+            //['', 'Close connection', 'closeconn'],
+            //['', 'console.log %n', 'write'],
+            //['', 'bad only %n', 'writeB']
         ],
         
         menus: {
