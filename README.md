@@ -14,7 +14,7 @@ SkelScratch exists in two parts: A server that reads from the Kinect, and a clie
 
 Part 1: Downloading and installing the server.
 
-Go to <a href="https://github.com/visor841/Kinect2JSON/releases" target="_blank">Kinect2JSON</a>.  
+Go to <a href="https://github.com/Calvin-CS/Kinect2JSON/releases" target="_blank">Kinect2JSON</a>.  
 Go to the downloads section next to "Latest release".  
 Click on the "Kinect2JSON.zip" link. Save the file.  
 Go to your downloads folder and right-click on "Kinect2JSON.zip", and click "Extract All...", and then click "Extract" in the bottom right.  
@@ -34,20 +34,20 @@ The server will now launch.  It might take a minute. Be patient.
 
 Part 2: Launch
 
-Go to <a href="http://www.scratchx.org/?url=http://visor841.github.io/SkelScratch/SkelScratch.js#scratch" target="_blank">scratchx</a>.   
+Go to <a href="http://www.scratchx.org/?url=http://Calvin-CS.github.io/SkelScratch/SkelScratch.js#scratch" target="_blank">scratchx</a>.   
 Click "Ok", "I understand, continue", and "Ok".  
 If you see a bunch of blocks show up, congratulations, SkelScratch is now loaded!
 
 Optional: Samples
 
-Go to <a href="https://github.com/visor841/SkelScratch/releases" target="_blank">SkelScratch</a>.  
+Go to <a href="https://github.com/Calvin-CS/SkelScratch/releases" target="_blank">SkelScratch</a>.  
 Click on "Source code (zip)". Save the file.  
 Go to your downloads folder and right-click on the folder starting with "SkelScratch" (which you just downloaded), and click "Extract All...", and then click "Extract" in the bottom right.  
 Go back to ScratchX.  
 Click "File" in the top left, then "Load Project".  
 Navigate to the extracted folder, open it, open the folder inside, and then you should see a folder named "SkelScratch Samples".Open it, and you should see the samples. Double-click on the one you want to open.
 
-If you want more help, go to the <a href="https://github.com/visor841/SkelScratch/wiki" target="_blank">wiki</a>!
+If you want more help, go to the <a href="https://github.com/Calvin-CS/SkelScratch/wiki" target="_blank">wiki</a>!
 
 ***Troubleshooting***
 
