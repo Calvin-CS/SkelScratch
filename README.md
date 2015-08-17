@@ -19,8 +19,7 @@ Go to the downloads section next to "Latest release".
 Click on the "Kinect2JSON.zip" link. Save the file.  
 Go to your downloads folder and right-click on "Kinect2JSON.zip", and click "Extract All...", and then click "Extract" in the bottom right.  
 Double-click on setup.
-
-A window will come up saying "Windows protected your PC". ***Don't click on "OK".*** Click "More info", then click "Run anyway".  
+  
 A box will come up saying "Application Install - Security Warning". Click "Install".  
 A window will come up saying "Windows protected your PC". Just click "OK" this time.
 
