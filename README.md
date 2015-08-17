@@ -9,6 +9,7 @@ SkelScratch supports Chrome and Firefox, and does not support Internet Explorer.
 
 Plug your Kinect into your PC.  
 Make sure your Kinect is plugged in to a USB 3.0 port.
+Wait for Kinect driver to install. This may take a few minutes.
 
 SkelScratch exists in two parts: A server that reads from the Kinect, and a client that connects to the server in ScratchX.
 
@@ -44,7 +45,7 @@ Click on "Source code (zip)". Save the file.
 Go to your downloads folder and right-click on the folder starting with "SkelScratch" (which you just downloaded), and click "Extract All...", and then click "Extract" in the bottom right.  
 Go back to ScratchX.  
 Click "File" in the top left, then "Load Project".  
-Navigate to the extracted folder, open it, open the folder inside, and then you should see a folder named "SkelScratch Samples".Open it, and you should see the samples. Double-click on the one you want to open.
+Navigate to the extracted folder, open it, open the folder inside, and then you should see a folder named "SkelScratch Samples". Open it, and you should see folders with samples, "Examples" and "Games". Open one and double-click on the sample you want to open.
 
 If you want more help, go to the <a href="https://github.com/Calvin-CS/SkelScratch/wiki" target="_blank">wiki</a>!
 
