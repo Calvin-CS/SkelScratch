@@ -8,7 +8,7 @@ SkelScratch supports Chrome and Firefox, and does not support Internet Explorer.
 ***Installation Instructions***
 
 Plug your Kinect into your PC.  
-Make sure your Kinect is plugged in to a USB 3.0 port.
+If you have a Kinect v2, make sure it is plugged in to a USB 3.0 port.
 Wait for Kinect driver to install. This may take a few minutes.
 
 SkelScratch exists in two parts: A server that reads from the Kinect, and a client that connects to the server in ScratchX.
@@ -17,8 +17,8 @@ Part 1: Downloading and installing the server.
 
 Go to <a href="https://github.com/Calvin-CS/Kinect2JSON/releases" target="_blank">Kinect2JSON</a>.  
 Go to the downloads section next to "Latest release".  
-Click on the "Kinect2JSON.zip" link. Save the file.  
-Go to your downloads folder and right-click on "Kinect2JSON.zip", and click "Extract All...", and then click "Extract" in the bottom right.  
+Click on the "Kinect2JSON.zip" link if you have a Kinect v2, or "v1Kinect2JSON.zip" if you have the older Kinect. Save the file.  
+Go to your downloads folder and right-click on ".zip" file, and click "Extract All...", and then click "Extract" in the bottom right.  
 Double-click on setup.
   
 A box will come up saying "Application Install - Security Warning". Click "Install".  
@@ -50,5 +50,7 @@ Navigate to the extracted folder, open it, open the folder inside, and then you 
 If you want more help, go to the <a href="https://github.com/Calvin-CS/SkelScratch/wiki" target="_blank">wiki</a>!
 
 ***Troubleshooting***
+
+Note: The Kinect v1 does not support handstates and the "Spine Shoulder", both Hand Tips, and both Thumb joints. Those will simply be returned as 0.
 
 The client connects to port 8181.
